@@ -9,12 +9,12 @@
 import Foundation
 import SpriteKit
 
-class SpriteElementScene : SKScene {
+public class SpriteElementScene : SKScene {
 
-    var lastUpdateTime: NSTimeInterval?
-    var attachedElements: [SpriteElementNodeReference: [SpriteElementReference]] = [:]
+    private var lastUpdateTime: NSTimeInterval?
+    private var attachedElements: [SpriteElementNodeReference: [SpriteElementReference]] = [:]
     
-    func attachElement(element: SpriteElement, toNode node: SKNode) {
+    public func attachElement(element: SpriteElement, toNode node: SKNode) {
        
         let nodeRef = SpriteElementNodeReference(value: node)
         let elementReference = SpriteElementReference(value: element)
@@ -55,7 +55,7 @@ class SpriteElementScene : SKScene {
         }
     }
     
-    override func update(currentTime: NSTimeInterval) {
+    public override func update(currentTime: NSTimeInterval) {
         var delta: NSTimeInterval = 0
         
         if let lastUpdateTime = self.lastUpdateTime {
@@ -70,49 +70,49 @@ class SpriteElementScene : SKScene {
         }
     }
     
-    override func didEvaluateActions() {
+    public override func didEvaluateActions() {
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
             element.didEvaluateActions?(node)
             return
         }
     }
     
-    override func didSimulatePhysics(){
+    public override func didSimulatePhysics(){
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
             element.didSimulatePhysics?(node)
             return
         }
     }
     
-    override func didApplyConstraints(){
+    public override func didApplyConstraints(){
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
             element.didApplyConstraints?(node)
             return
         }
     }
 
-    override func didFinishUpdate(){
+    public override func didFinishUpdate(){
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
             element.didFinishUpdate?(node)
             return
         }
     }
     
-    override func didMoveToView(view: SKView){
+    public override func didMoveToView(view: SKView){
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
             element.didMoveToView?(view, node: node)
             return
         }
     }
     
-    override func willMoveFromView(view: SKView){
+    public override func willMoveFromView(view: SKView){
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
             element.willMoveFromView?(view, node: node)
             return
         }
     }
     
-    override func didChangeSize(oldSize: CGSize){
+    public override func didChangeSize(oldSize: CGSize){
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
            element.didChangeSize?(oldSize, node: node)
             return

@@ -9,24 +9,24 @@
 import Foundation
 import SpriteKit
 
-@objc protocol SpriteElement {
-    
+@objc public protocol SpriteElement {
+
     optional func didAttach(node: SKNode, inScene scene:SpriteElementScene)
-    
+
     optional func update(currentTime: NSTimeInterval, delta: NSTimeInterval, node: SKNode)
-    
+
     optional func didEvaluateActions(node: SKNode)
-    
+
     optional func didSimulatePhysics(node: SKNode)
-    
+
     optional func didApplyConstraints(node: SKNode)
-    
+
     optional func didFinishUpdate(node: SKNode)
-    
+
     optional func didMoveToView(view: SKView!, node: SKNode)
-    
+
     optional func willMoveFromView(view: SKView!, node: SKNode)
-    
+
     optional func didChangeSize(oldSize: CGSize, node: SKNode)
-    
+
 }
