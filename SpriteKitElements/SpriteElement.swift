@@ -29,4 +29,7 @@ import SpriteKit
 
     optional func didChangeSize(oldSize: CGSize, node: SKNode)
 
+    optional func didBeginContact(contact: SKPhysicsContact, node: SKNode)
+    
+    optional func didEndContact(contact: SKPhysicsContact, node: SKNode)
 }

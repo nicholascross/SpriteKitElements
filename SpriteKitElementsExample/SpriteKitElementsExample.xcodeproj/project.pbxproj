@@ -22,6 +22,8 @@
 		0113B9161ADA4B7F0023D9E6 /* SpriteAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0113B9151ADA4B7F0023D9E6 /* SpriteAnchor.swift */; };
 		0138AD821ADA62F500CBD221 /* LifeCycleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138AD811ADA62F500CBD221 /* LifeCycleElement.swift */; };
 		0138AD841ADA667200CBD221 /* OrbitElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138AD831ADA667200CBD221 /* OrbitElement.swift */; };
+		013EB1551ADFA43E0006BFC4 /* SpriteElementEssence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013EB1541ADFA43E0006BFC4 /* SpriteElementEssence.swift */; };
+		013EB1571ADFAF610006BFC4 /* ColourElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013EB1561ADFAF610006BFC4 /* ColourElement.swift */; };
 		250B86C6D791CBD608DACE8E /* SpriteElementNodeReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B8C53261964156E2B29B4 /* SpriteElementNodeReference.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		0113B9151ADA4B7F0023D9E6 /* SpriteAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteAnchor.swift; sourceTree = "<group>"; };
 		0138AD811ADA62F500CBD221 /* LifeCycleElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycleElement.swift; sourceTree = "<group>"; };
 		0138AD831ADA667200CBD221 /* OrbitElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrbitElement.swift; sourceTree = "<group>"; };
+		013EB1541ADFA43E0006BFC4 /* SpriteElementEssence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteElementEssence.swift; sourceTree = "<group>"; };
+		013EB1561ADFAF610006BFC4 /* ColourElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourElement.swift; sourceTree = "<group>"; };
 		250B8C53261964156E2B29B4 /* SpriteElementNodeReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteElementNodeReference.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +102,7 @@
 		0113B8E51ADA49EB0023D9E6 /* SpriteKitElementsExample */ = {
 			isa = PBXGroup;
 			children = (
+				013EB1561ADFAF610006BFC4 /* ColourElement.swift */,
 				0138AD811ADA62F500CBD221 /* LifeCycleElement.swift */,
 				0138AD831ADA667200CBD221 /* OrbitElement.swift */,
 				0113B9151ADA4B7F0023D9E6 /* SpriteAnchor.swift */,
@@ -146,6 +151,7 @@
 				0113B90F1ADA4B680023D9E6 /* SpriteElementReference.swift */,
 				0113B9101ADA4B680023D9E6 /* SpriteElementScene.swift */,
 				250B8C53261964156E2B29B4 /* SpriteElementNodeReference.swift */,
+				013EB1541ADFA43E0006BFC4 /* SpriteElementEssence.swift */,
 			);
 			name = SpriteKitElements;
 			path = ../SpriteKitElements;
@@ -256,6 +262,8 @@
 				0138AD821ADA62F500CBD221 /* LifeCycleElement.swift in Sources */,
 				0113B8ED1ADA49EB0023D9E6 /* GameScene.swift in Sources */,
 				0113B9131ADA4B680023D9E6 /* SpriteElementReference.swift in Sources */,
+				013EB1571ADFAF610006BFC4 /* ColourElement.swift in Sources */,
+				013EB1551ADFA43E0006BFC4 /* SpriteElementEssence.swift in Sources */,
 				0113B8EF1ADA49EB0023D9E6 /* GameViewController.swift in Sources */,
 				0113B9111ADA4B680023D9E6 /* SpriteElementObjectDeconstructor.swift in Sources */,
 				0113B9121ADA4B680023D9E6 /* SpriteElement.swift in Sources */,

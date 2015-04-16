@@ -18,6 +18,7 @@ class GameScene: SpriteElementScene {
     private let centerPoint = SpriteAnchor(anchor: SpriteAnchorPoint.Center(0, 0))
     private let lifeCycle = LifeCycleElement()
     private let orbit = OrbitElement()
+    private let colour = ColourElement()
     
     override func didMoveToView(view: SKView) {
         let topLeftNode = self.childNodeWithName("TopLeft")!
@@ -46,6 +47,15 @@ class GameScene: SpriteElementScene {
         
         //log when ever an element method is called
         //attachElement(lifeCycle, toNode: centerNode)
+        
+        attachElement(colour, toNode: centerNode.childNodeWithName("orbit")!)
+        
+        for child in children {
+            
+            if let node = child as? SKNode where  node.name == "debris" {
+                attachElement(colour, toNode: node)
+            }
+        }
         
         self.size = view.frame.size
         

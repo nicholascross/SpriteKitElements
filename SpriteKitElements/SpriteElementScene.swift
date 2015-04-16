@@ -9,11 +9,11 @@
 import Foundation
 import SpriteKit
 
-public class SpriteElementScene : SKScene {
+public class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
 
     private var lastUpdateTime: NSTimeInterval?
     private var attachedElements: [SpriteElementNodeReference: [SpriteElementReference]] = [:]
-    
+
     public func attachElement(element: SpriteElement, toNode node: SKNode) {
        
         let nodeRef = SpriteElementNodeReference(value: node)
@@ -99,6 +99,8 @@ public class SpriteElementScene : SKScene {
     }
     
     public override func didMoveToView(view: SKView){
+        physicsWorld.contactDelegate = self;
+        
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
             element.didMoveToView?(view, node: node)
             return
@@ -118,6 +120,22 @@ public class SpriteElementScene : SKScene {
             return
         }
     }
-
     
+    public func didBeginContact(contact: SKPhysicsContact) {
+        _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
+            if let nodeA = contact.bodyA.node, let nodeB = contact.bodyB.node where nodeA.isEqualToNode(node) || nodeB.isEqualToNode(node) {
+                element.didBeginContact?(contact, node: node)
+            }
+            return
+        }
+    }
+
+    public func didEndContact(contact: SKPhysicsContact) {
+        _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
+            if let nodeA = contact.bodyA.node, let nodeB = contact.bodyB.node where nodeA.isEqualToNode(node) || nodeB.isEqualToNode(node) {
+                element.didEndContact?(contact, node: node)
+            }
+            return
+        }
+    }
 }
