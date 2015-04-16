@@ -34,8 +34,6 @@ You can attach an element to a node in your scene using the `func attachElement(
 
 Implement any of the optional methods in this interface to perform specific actions on a node during the scene life cycle.
 
-In order to maximise reuse of elements you should avoid maintaining state in the element where possible.
-
 ```swift
 	//Called when an element is first attached to a node
     optional func didAttach(node: SKNode, inScene scene:SpriteElementScene)
@@ -56,4 +54,64 @@ In order to maximise reuse of elements you should avoid maintaining state in the
     optional func willMoveFromView(view: SKView!, node: SKNode)
 
     optional func didChangeSize(oldSize: CGSize, node: SKNode)
+    
+    optional func didBeginContact(contact: SKPhysicsContact, node: SKNode)
+    
+    optional func didEndContact(contact: SKPhysicsContact, node: SKNode)
+```
+
+# SpriteEssence (class)
+
+In order to maximise reuse of elements you should avoid maintaining state in the element where possible.
+
+If maintaining per node state is necessary for the behaviour you are implementing you can use the SpriteEssence class to maintain additional state for your element unique to the node the element is currently handling in a type safe manner.
+
+# Example
+
+Any SKSpriteNode with this element attached will progressively change colour as it collides with other nodes that have the same attached element.  You can see this in action in the example project.
+
+```swift
+import Foundation
+import SpriteKit
+
+@objc class ColourElement : SpriteElement {
+    
+    let red = SpriteEssence<CGFloat>()
+    let green = SpriteEssence<CGFloat>()
+    let blue = SpriteEssence<CGFloat>()
+    
+    func didAttach(node: SKNode, inScene scene: SpriteElementScene) {
+        node.physicsBody?.contactTestBitMask = 1;
+    }
+    
+    func didBeginContact(contact: SKPhysicsContact, node: SKNode) {
+        if let r = red[node], let g = green[node], let b = blue[node] {
+            red[node] = r + 0.05
+            green[node] = g + 0.1
+            blue[node] = b + 0.025
+        }
+        else {
+            red[node] = 0
+            green[node] = 0
+            blue[node] = 1
+        }
+        
+        if let spriteNode = node as? SKSpriteNode, let r = red[node], let g = green[node], let b = blue[node]  {
+            if r > 0.9 {
+                red[node] = 0
+            }
+            
+            if g > 0.9 {
+                green[node] = 0
+            }
+            
+            if b > 0.9 {
+                blue[node] = 0
+            }
+            
+            spriteNode.color = UIColor(red: r, green: g, blue: b, alpha: 1)
+        }
+    }
+    
+}
 ```
