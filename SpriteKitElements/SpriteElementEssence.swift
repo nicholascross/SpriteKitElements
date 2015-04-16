@@ -13,7 +13,15 @@ var kSpriteEssence: UInt8 = 0
 
 public class SpriteEssence<Essence> {
     
-    let key = NSUUID().UUIDString
+    let key: String
+    
+    init() {
+        key = NSUUID().UUIDString
+    }
+    
+    init(key: String) {
+        self.key = key
+    }
     
     public subscript(node: SKNode) -> Essence? {
         get {
