@@ -15,11 +15,11 @@ public class SpriteEssence<Essence> {
     
     let key: String
     
-    init() {
+    public init() {
         key = NSUUID().UUIDString
     }
     
-    init(key: String) {
+    public init(key: String) {
         self.key = key
     }
     
