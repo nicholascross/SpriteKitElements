@@ -34,4 +34,10 @@ import SpriteKit
         }
     }
     
+    func didEndContact(contact: SKPhysicsContact, node: SKNode) {
+        /*if let scene = node.scene as? SpriteElementScene {
+            scene.detachElement(self, fromNode: node)
+        }*/
+    }
+    
 }

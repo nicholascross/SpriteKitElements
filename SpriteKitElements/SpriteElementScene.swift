@@ -41,6 +41,19 @@ public class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
 
         element.didAttach?(node, inScene: self)
     }
+    
+    public func detachElement(element: SpriteElement, fromNode node: SKNode) {
+        let nodeRef = SpriteElementNodeReference(value: node)
+        if var elements = self.attachedElements[nodeRef] {
+            self.attachedElements[nodeRef] = elements.filter({ (ref: SpriteElementReference) -> Bool in
+                if let element1 = ref.element {
+                    return element1 !== element
+                }
+                
+                return false
+            })
+        }
+    }
        
     private func _enumerateSpriteElements(callback: (element: SpriteElement, node: SKNode)->()) {
         for (nodeRef, elements) in self.attachedElements {
