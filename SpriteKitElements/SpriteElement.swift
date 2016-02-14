@@ -34,7 +34,7 @@ public protocol SpriteElement : class {
     func didEndContact(contact: SKPhysicsContact, node: SKNode)
 }
 
-extension SpriteElement {
+public extension SpriteElement {
     func didAttach(node: SKNode, inScene scene:SpriteElementScene) {
         
     }
