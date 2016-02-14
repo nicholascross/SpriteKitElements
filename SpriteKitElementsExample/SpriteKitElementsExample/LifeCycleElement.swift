@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SpriteKitElements
 import SpriteKit
 
 @objc class LifeCycleElement : NSObject, SpriteElement {

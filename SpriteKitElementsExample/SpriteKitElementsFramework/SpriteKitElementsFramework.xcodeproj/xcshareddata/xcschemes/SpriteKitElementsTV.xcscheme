@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E1BDC50A1C7049D3001DEA28"
-               BuildableName = "SpriteKitElementstvOS.framework"
-               BlueprintName = "SpriteKitElementstvOS"
-               ReferencedContainer = "container:SpriteKitElementsExample.xcodeproj">
+               BlueprintIdentifier = "E1BDC5751C7061BB001DEA28"
+               BuildableName = "SpriteKitElementsTV.framework"
+               BlueprintName = "SpriteKitElementsTV"
+               ReferencedContainer = "container:SpriteKitElementsFramework.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E1BDC50A1C7049D3001DEA28"
-            BuildableName = "SpriteKitElementstvOS.framework"
-            BlueprintName = "SpriteKitElementstvOS"
-            ReferencedContainer = "container:SpriteKitElementsExample.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -54,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E1BDC50A1C7049D3001DEA28"
-            BuildableName = "SpriteKitElementstvOS.framework"
-            BlueprintName = "SpriteKitElementstvOS"
-            ReferencedContainer = "container:SpriteKitElementsExample.xcodeproj">
+            BlueprintIdentifier = "E1BDC5751C7061BB001DEA28"
+            BuildableName = "SpriteKitElementsTV.framework"
+            BlueprintName = "SpriteKitElementsTV"
+            ReferencedContainer = "container:SpriteKitElementsFramework.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -72,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E1BDC50A1C7049D3001DEA28"
-            BuildableName = "SpriteKitElementstvOS.framework"
-            BlueprintName = "SpriteKitElementstvOS"
-            ReferencedContainer = "container:SpriteKitElementsExample.xcodeproj">
+            BlueprintIdentifier = "E1BDC5751C7061BB001DEA28"
+            BuildableName = "SpriteKitElementsTV.framework"
+            BlueprintName = "SpriteKitElementsTV"
+            ReferencedContainer = "container:SpriteKitElementsFramework.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

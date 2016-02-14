@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import SpriteKitElements
 
 class GameScene: SpriteElementScene {
 
@@ -52,8 +53,8 @@ class GameScene: SpriteElementScene {
         
         for child in children {
             
-            if let node = child as? SKNode where  node.name == "debris" {
-                attachElement(colour, toNode: node)
+            if child.name == "debris" {
+                attachElement(colour, toNode: child)
             }
         }
         

@@ -8,6 +8,7 @@
 
 import Foundation
 import SpriteKit
+import SpriteKitElements
 
 @objc class ColourElement : NSObject, SpriteElement {
     
