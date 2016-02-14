@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-@objc class ColourElement : SpriteElement {
+@objc class ColourElement : NSObject, SpriteElement {
     
     let hue = SpriteEssence<CGFloat>()
     

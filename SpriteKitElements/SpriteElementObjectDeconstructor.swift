@@ -10,7 +10,7 @@ import Foundation
 
 var kObjectDeconstructorKey = "ObjectDeconstructorKey"
 
-@objc class SpriteElementObjectDeconstructor {
+@objc class SpriteElementObjectDeconstructor : NSObject {
     
     private var callbacks: [()->()]
     
@@ -32,7 +32,7 @@ var kObjectDeconstructorKey = "ObjectDeconstructorKey"
         }
         else {
             let decon = SpriteElementObjectDeconstructor(callback: callback)
-            objc_setAssociatedObject(object, &kObjectDeconstructorKey, decon, UInt(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
+            objc_setAssociatedObject(object, &kObjectDeconstructorKey, decon, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     

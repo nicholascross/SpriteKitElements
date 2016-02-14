@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-@objc class OrbitElement : SpriteElement {
+@objc class OrbitElement : NSObject, SpriteElement {
     
     var radius: CGFloat = 180
     var period = 4.0;

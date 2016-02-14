@@ -38,17 +38,17 @@ public class SpriteEssence<Essence> {
             }
             else {
                 let vessel = SpriteEssenceVessel()
-                objc_setAssociatedObject(node, &kSpriteEssence, vessel, UInt(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
+                objc_setAssociatedObject(node, &kSpriteEssence, vessel, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
                 vessel[key] = newValue
             }
         }
     }
 }
 
-@objc private class SpriteEssenceVessel {
+@objc private class SpriteEssenceVessel : NSObject {
     var essence : [String:Any]
     
-    init () {
+    override init () {
         self.essence = [String:Any]()
     }
     

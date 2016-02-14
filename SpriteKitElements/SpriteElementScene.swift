@@ -44,7 +44,7 @@ public class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
     
     public func detachElement(element: SpriteElement, fromNode node: SKNode) {
         let nodeRef = SpriteElementNodeReference(value: node)
-        if var elements = self.attachedElements[nodeRef] {
+        if let elements = self.attachedElements[nodeRef] {
             self.attachedElements[nodeRef] = elements.filter({ (ref: SpriteElementReference) -> Bool in
                 if let element1 = ref.element {
                     return element1 !== element

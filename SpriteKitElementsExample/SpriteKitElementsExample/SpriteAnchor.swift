@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-@objc class SpriteAnchor : SpriteElement {
+class SpriteAnchor : SpriteElement {
     
     let anchorPoint: SpriteAnchorPoint
     

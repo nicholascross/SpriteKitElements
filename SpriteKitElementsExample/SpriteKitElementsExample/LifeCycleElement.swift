@@ -9,41 +9,41 @@
 import Foundation
 import SpriteKit
 
-@objc class LifeCycleElement : SpriteElement {
+@objc class LifeCycleElement : NSObject, SpriteElement {
     func didAttach(node: SKNode, inScene scene:SpriteElementScene) {
-        println("didAttach")
+        print("didAttach")
     }
     
     func update(currentTime: NSTimeInterval, delta: NSTimeInterval, node: SKNode){
-        println("update currentTime:\(currentTime) delta:\(delta)")
+        print("update currentTime:\(currentTime) delta:\(delta)")
     }
     
     func didEvaluateActions(node: SKNode){
-        println("didEvaluateActions")
+        print("didEvaluateActions")
     }
     
     func didSimulatePhysics(node: SKNode){
-        println("didSimulatePhysics")
+        print("didSimulatePhysics")
     }
     
     func didApplyConstraints(node: SKNode){
-        println("didApplyConstraints")
+        print("didApplyConstraints")
     }
     
     func didFinishUpdate(node: SKNode){
-        println("didFinishUpdate")
+        print("didFinishUpdate")
     }
     
     func didMoveToView(view: SKView!, node: SKNode){
-        println("didMoveToView")
+        print("didMoveToView")
     }
     
     func willMoveFromView(view: SKView!, node: SKNode){
-        println("willMoveFromView")
+        print("willMoveFromView")
     }
     
     func didChangeSize(oldSize: CGSize, node: SKNode){
-        println("didChangeSize")
+        print("didChangeSize")
     }
 
 }
