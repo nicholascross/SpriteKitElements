@@ -9,27 +9,74 @@
 import Foundation
 import SpriteKit
 
-@objc public protocol SpriteElement {
+public protocol SpriteElement : class {
 
-    optional func didAttach(node: SKNode, inScene scene:SpriteElementScene)
+    func didAttach(node: SKNode, inScene scene:SpriteElementScene)
 
-    optional func update(currentTime: NSTimeInterval, delta: NSTimeInterval, node: SKNode)
+    func update(currentTime: NSTimeInterval, delta: NSTimeInterval, node: SKNode)
 
-    optional func didEvaluateActions(node: SKNode)
+    func didEvaluateActions(node: SKNode)
 
-    optional func didSimulatePhysics(node: SKNode)
+    func didSimulatePhysics(node: SKNode)
 
-    optional func didApplyConstraints(node: SKNode)
+    func didApplyConstraints(node: SKNode)
 
-    optional func didFinishUpdate(node: SKNode)
+    func didFinishUpdate(node: SKNode)
 
-    optional func didMoveToView(view: SKView!, node: SKNode)
+    func didMoveToView(view: SKView!, node: SKNode)
 
-    optional func willMoveFromView(view: SKView!, node: SKNode)
+    func willMoveFromView(view: SKView!, node: SKNode)
 
-    optional func didChangeSize(oldSize: CGSize, node: SKNode)
+    func didChangeSize(oldSize: CGSize, node: SKNode)
 
-    optional func didBeginContact(contact: SKPhysicsContact, node: SKNode)
+    func didBeginContact(contact: SKPhysicsContact, node: SKNode)
     
-    optional func didEndContact(contact: SKPhysicsContact, node: SKNode)
+    func didEndContact(contact: SKPhysicsContact, node: SKNode)
+}
+
+extension SpriteElement {
+    func didAttach(node: SKNode, inScene scene:SpriteElementScene) {
+        
+    }
+    
+    func update(currentTime: NSTimeInterval, delta: NSTimeInterval, node: SKNode) {
+        
+    }
+    
+    func didEvaluateActions(node: SKNode) {
+        
+    }
+    
+    func didSimulatePhysics(node: SKNode) {
+        
+    }
+    
+    func didApplyConstraints(node: SKNode) {
+        
+    }
+    
+    func didFinishUpdate(node: SKNode) {
+        
+    }
+    
+    func didMoveToView(view: SKView!, node: SKNode) {
+        
+    }
+    
+    func willMoveFromView(view: SKView!, node: SKNode) {
+        
+    }
+    
+    func didChangeSize(oldSize: CGSize, node: SKNode) {
+        
+    }
+    
+    func didBeginContact(contact: SKPhysicsContact, node: SKNode) {
+        
+    }
+    
+    func didEndContact(contact: SKPhysicsContact, node: SKNode) {
+        
+    }
+
 }

@@ -25,6 +25,14 @@
 		013EB1551ADFA43E0006BFC4 /* SpriteElementEssence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013EB1541ADFA43E0006BFC4 /* SpriteElementEssence.swift */; };
 		013EB1571ADFAF610006BFC4 /* ColourElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013EB1561ADFAF610006BFC4 /* ColourElement.swift */; };
 		250B86C6D791CBD608DACE8E /* SpriteElementNodeReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B8C53261964156E2B29B4 /* SpriteElementNodeReference.swift */; };
+		E1BDC50E1C7049D3001DEA28 /* SpriteKitElements-tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E1BDC50D1C7049D3001DEA28 /* SpriteKitElements-tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1BDC5131C7049EF001DEA28 /* SpriteElementObjectDeconstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0113B90D1ADA4B680023D9E6 /* SpriteElementObjectDeconstructor.swift */; };
+		E1BDC5141C7049EF001DEA28 /* SpriteElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0113B90E1ADA4B680023D9E6 /* SpriteElement.swift */; };
+		E1BDC5151C7049EF001DEA28 /* SpriteElementReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0113B90F1ADA4B680023D9E6 /* SpriteElementReference.swift */; };
+		E1BDC5161C7049EF001DEA28 /* SpriteElementScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0113B9101ADA4B680023D9E6 /* SpriteElementScene.swift */; };
+		E1BDC5171C7049EF001DEA28 /* SpriteElementNodeReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B8C53261964156E2B29B4 /* SpriteElementNodeReference.swift */; };
+		E1BDC5181C7049EF001DEA28 /* SpriteElementEssence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013EB1541ADFA43E0006BFC4 /* SpriteElementEssence.swift */; };
+		E1BDC5211C704A19001DEA28 /* SpriteKitElements-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E1BDC5201C704A19001DEA28 /* SpriteKitElements-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +68,11 @@
 		013EB1541ADFA43E0006BFC4 /* SpriteElementEssence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteElementEssence.swift; sourceTree = "<group>"; };
 		013EB1561ADFAF610006BFC4 /* ColourElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourElement.swift; sourceTree = "<group>"; };
 		250B8C53261964156E2B29B4 /* SpriteElementNodeReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteElementNodeReference.swift; sourceTree = "<group>"; };
+		E1BDC50B1C7049D3001DEA28 /* SpriteKitElementstvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpriteKitElementstvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1BDC50D1C7049D3001DEA28 /* SpriteKitElements-tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpriteKitElements-tvOS.h"; sourceTree = "<group>"; };
+		E1BDC50F1C7049D3001DEA28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1BDC5201C704A19001DEA28 /* SpriteKitElements-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpriteKitElements-iOS.h"; sourceTree = "<group>"; };
+		E1BDC5221C704A19001DEA28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +90,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1BDC5071C7049D3001DEA28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -86,6 +106,8 @@
 				0113B90C1ADA4B680023D9E6 /* SpriteKitElements */,
 				0113B8E51ADA49EB0023D9E6 /* SpriteKitElementsExample */,
 				0113B8FF1ADA49EB0023D9E6 /* SpriteKitElementsExampleTests */,
+				E1BDC50C1C7049D3001DEA28 /* SpriteKitElements-tvOS */,
+				E1BDC51F1C704A19001DEA28 /* SpriteKitElements-iOS */,
 				0113B8E41ADA49EB0023D9E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +117,7 @@
 			children = (
 				0113B8E31ADA49EB0023D9E6 /* SpriteKitElementsExample.app */,
 				0113B8FC1ADA49EB0023D9E6 /* SpriteKitElementsExampleTests.xctest */,
+				E1BDC50B1C7049D3001DEA28 /* SpriteKitElementstvOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,7 +180,37 @@
 			path = ../SpriteKitElements;
 			sourceTree = "<group>";
 		};
+		E1BDC50C1C7049D3001DEA28 /* SpriteKitElements-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				E1BDC50D1C7049D3001DEA28 /* SpriteKitElements-tvOS.h */,
+				E1BDC50F1C7049D3001DEA28 /* Info.plist */,
+			);
+			path = "SpriteKitElements-tvOS";
+			sourceTree = "<group>";
+		};
+		E1BDC51F1C704A19001DEA28 /* SpriteKitElements-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E1BDC5201C704A19001DEA28 /* SpriteKitElements-iOS.h */,
+				E1BDC5221C704A19001DEA28 /* Info.plist */,
+			);
+			path = "SpriteKitElements-iOS";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E1BDC5081C7049D3001DEA28 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1BDC50E1C7049D3001DEA28 /* SpriteKitElements-tvOS.h in Headers */,
+				E1BDC5211C704A19001DEA28 /* SpriteKitElements-iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0113B8E21ADA49EB0023D9E6 /* SpriteKitElementsExample */ = {
@@ -195,6 +248,24 @@
 			productReference = 0113B8FC1ADA49EB0023D9E6 /* SpriteKitElementsExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E1BDC50A1C7049D3001DEA28 /* SpriteKitElementstvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1BDC5101C7049D3001DEA28 /* Build configuration list for PBXNativeTarget "SpriteKitElementstvOS" */;
+			buildPhases = (
+				E1BDC5061C7049D3001DEA28 /* Sources */,
+				E1BDC5071C7049D3001DEA28 /* Frameworks */,
+				E1BDC5081C7049D3001DEA28 /* Headers */,
+				E1BDC5091C7049D3001DEA28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpriteKitElementstvOS;
+			productName = "SpriteKitElements-tvOS";
+			productReference = E1BDC50B1C7049D3001DEA28 /* SpriteKitElementstvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,6 +284,9 @@
 						CreatedOnToolsVersion = 6.3;
 						TestTargetID = 0113B8E21ADA49EB0023D9E6;
 					};
+					E1BDC50A1C7049D3001DEA28 = {
+						CreatedOnToolsVersion = 7.2;
+					};
 				};
 			};
 			buildConfigurationList = 0113B8DE1ADA49EB0023D9E6 /* Build configuration list for PBXProject "SpriteKitElementsExample" */;
@@ -230,6 +304,7 @@
 			targets = (
 				0113B8E21ADA49EB0023D9E6 /* SpriteKitElementsExample */,
 				0113B8FB1ADA49EB0023D9E6 /* SpriteKitElementsExampleTests */,
+				E1BDC50A1C7049D3001DEA28 /* SpriteKitElementstvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -247,6 +322,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0113B8FA1ADA49EB0023D9E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1BDC5091C7049D3001DEA28 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,6 +363,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0113B9031ADA49EB0023D9E6 /* SpriteKitElementsExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1BDC5061C7049D3001DEA28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1BDC5131C7049EF001DEA28 /* SpriteElementObjectDeconstructor.swift in Sources */,
+				E1BDC5141C7049EF001DEA28 /* SpriteElement.swift in Sources */,
+				E1BDC5151C7049EF001DEA28 /* SpriteElementReference.swift in Sources */,
+				E1BDC5161C7049EF001DEA28 /* SpriteElementScene.swift in Sources */,
+				E1BDC5171C7049EF001DEA28 /* SpriteElementNodeReference.swift in Sources */,
+				E1BDC5181C7049EF001DEA28 /* SpriteElementEssence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +429,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -354,7 +450,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = appletvos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -380,6 +476,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -392,7 +489,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -456,6 +553,53 @@
 			};
 			name = Release;
 		};
+		E1BDC5111C7049D3001DEA28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = "SpriteKitElements-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nacrossweb.SpriteKitElements-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E1BDC5121C7049D3001DEA28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = "SpriteKitElements-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nacrossweb.SpriteKitElements-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -485,6 +629,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E1BDC5101C7049D3001DEA28 /* Build configuration list for PBXNativeTarget "SpriteKitElementstvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1BDC5111C7049D3001DEA28 /* Debug */,
+				E1BDC5121C7049D3001DEA28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

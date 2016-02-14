@@ -39,7 +39,7 @@ public class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
             }
         }
 
-        element.didAttach?(node, inScene: self)
+        element.didAttach(node, inScene: self)
     }
     
     public func detachElement(element: SpriteElement, fromNode node: SKNode) {
@@ -78,35 +78,35 @@ public class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
         self.lastUpdateTime = currentTime
 
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-            element.update?(currentTime, delta:delta, node: node)
+            element.update(currentTime, delta:delta, node: node)
             return
         }
     }
     
     public override func didEvaluateActions() {
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-            element.didEvaluateActions?(node)
+            element.didEvaluateActions(node)
             return
         }
     }
     
     public override func didSimulatePhysics(){
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-            element.didSimulatePhysics?(node)
+            element.didSimulatePhysics(node)
             return
         }
     }
     
     public override func didApplyConstraints(){
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-            element.didApplyConstraints?(node)
+            element.didApplyConstraints(node)
             return
         }
     }
 
     public override func didFinishUpdate(){
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-            element.didFinishUpdate?(node)
+            element.didFinishUpdate(node)
             return
         }
     }
@@ -115,21 +115,21 @@ public class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self;
         
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-            element.didMoveToView?(view, node: node)
+            element.didMoveToView(view, node: node)
             return
         }
     }
     
     public override func willMoveFromView(view: SKView){
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-            element.willMoveFromView?(view, node: node)
+            element.willMoveFromView(view, node: node)
             return
         }
     }
     
     public override func didChangeSize(oldSize: CGSize){
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-           element.didChangeSize?(oldSize, node: node)
+           element.didChangeSize(oldSize, node: node)
             return
         }
     }
@@ -137,7 +137,7 @@ public class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
     public func didBeginContact(contact: SKPhysicsContact) {
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
             if let nodeA = contact.bodyA.node, let nodeB = contact.bodyB.node where nodeA.isEqualToNode(node) || nodeB.isEqualToNode(node) {
-                element.didBeginContact?(contact, node: node)
+                element.didBeginContact(contact, node: node)
             }
             return
         }
@@ -146,7 +146,7 @@ public class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
     public func didEndContact(contact: SKPhysicsContact) {
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
             if let nodeA = contact.bodyA.node, let nodeB = contact.bodyB.node where nodeA.isEqualToNode(node) || nodeB.isEqualToNode(node) {
-                element.didEndContact?(contact, node: node)
+                element.didEndContact(contact, node: node)
             }
             return
         }
