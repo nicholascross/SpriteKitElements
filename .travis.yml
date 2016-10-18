@@ -1,0 +1,6 @@
+os:
+  - osx
+language: objective-c
+xcode_project: SpriteKitElementsExample/SpriteKitElementsFramework/SpriteKitElementsFramework.xcodeproj
+xcode_scheme: SpriteKitElementsiOS
+osx_image: xcode8
