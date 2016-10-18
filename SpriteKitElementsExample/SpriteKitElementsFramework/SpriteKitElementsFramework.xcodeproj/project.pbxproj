@@ -19,7 +19,6 @@
 		E1BDC5811C7061C8001DEA28 /* SpriteElementScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC54A1C7056FD001DEA28 /* SpriteElementScene.swift */; };
 		E1BDC5821C7061C8001DEA28 /* SpriteElementNodeReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC54B1C7056FD001DEA28 /* SpriteElementNodeReference.swift */; };
 		E1BDC5831C7061C8001DEA28 /* SpriteElementEssence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BDC54C1C7056FD001DEA28 /* SpriteElementEssence.swift */; };
-		E1BDC58A1C706AEA001DEA28 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1BDC5891C706AEA001DEA28 /* SpriteKit.framework */; };
 		E1BDC58C1C706AF1001DEA28 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1BDC58B1C706AF1001DEA28 /* SpriteKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,6 @@
 		E1BDC55D1C70580B001DEA28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1BDC5761C7061BB001DEA28 /* SpriteKitElementsTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpriteKitElementsTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BDC57A1C7061BB001DEA28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1BDC5891C706AEA001DEA28 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.1.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = DEVELOPER_DIR; };
 		E1BDC58B1C706AF1001DEA28 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -52,7 +50,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1BDC58A1C706AEA001DEA28 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				E1BDC58B1C706AF1001DEA28 /* SpriteKit.framework */,
-				E1BDC5891C706AEA001DEA28 /* SpriteKit.framework */,
 				E1BDC5381C7056E0001DEA28 /* SpriteKitElementsFramework */,
 				E1BDC55A1C70580B001DEA28 /* SpriteKitElementsiOS */,
 				E1BDC5771C7061BB001DEA28 /* SpriteKitElementsTV */,
@@ -177,6 +173,7 @@
 				TargetAttributes = {
 					E1BDC5581C70580B001DEA28 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					E1BDC5751C7061BB001DEA28 = {
 						CreatedOnToolsVersion = 7.2;
@@ -353,6 +350,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -375,6 +373,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

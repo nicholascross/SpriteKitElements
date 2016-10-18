@@ -9,12 +9,12 @@
 import Foundation
 import SpriteKit
 
-public class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
+open class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
 
-    private var lastUpdateTime: NSTimeInterval?
-    private var attachedElements: [SpriteElementNodeReference: [SpriteElementReference]] = [:]
+    fileprivate var lastUpdateTime: TimeInterval?
+    fileprivate var attachedElements: [SpriteElementNodeReference: [SpriteElementReference]] = [:]
 
-    public func attachElement(element: SpriteElement, toNode node: SKNode) {
+    open func attachElement(_ element: SpriteElement, toNode node: SKNode) {
        
         let nodeRef = SpriteElementNodeReference(value: node)
         let elementReference = SpriteElementReference(value: element)
@@ -39,10 +39,10 @@ public class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
             }
         }
 
-        element.didAttach(node, inScene: self)
+        element.didAttach(toNode: node, inScene: self)
     }
     
-    public func detachElement(element: SpriteElement, fromNode node: SKNode) {
+    open func detachElement(_ element: SpriteElement, fromNode node: SKNode) {
         let nodeRef = SpriteElementNodeReference(value: node)
         if let elements = self.attachedElements[nodeRef] {
             self.attachedElements[nodeRef] = elements.filter({ (ref: SpriteElementReference) -> Bool in
@@ -55,12 +55,12 @@ public class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
         }
     }
        
-    private func _enumerateSpriteElements(callback: (element: SpriteElement, node: SKNode)->()) {
+    fileprivate func _enumerateSpriteElements(_ callback: (_ element: SpriteElement, _ node: SKNode)->()) {
         for (nodeRef, elements) in self.attachedElements {
             if let node = nodeRef.node {
                 for elementReference in elements {
                     if let element = elementReference.element {
-                        callback(element: element, node: node)
+                        callback(element, node)
                     }
 
                 }
@@ -68,8 +68,8 @@ public class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    public override func update(currentTime: NSTimeInterval) {
-        var delta: NSTimeInterval = 0
+    open override func update(_ currentTime: TimeInterval) {
+        var delta: TimeInterval = 0
         
         if let lastUpdateTime = self.lastUpdateTime {
             delta = currentTime - lastUpdateTime
@@ -78,75 +78,75 @@ public class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
         self.lastUpdateTime = currentTime
 
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-            element.update(currentTime, delta:delta, node: node)
+            element.update(atTime: currentTime, delta:delta, node: node)
             return
         }
     }
     
-    public override func didEvaluateActions() {
+    open override func didEvaluateActions() {
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
             element.didEvaluateActions(node)
             return
         }
     }
     
-    public override func didSimulatePhysics(){
+    open override func didSimulatePhysics(){
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
             element.didSimulatePhysics(node)
             return
         }
     }
     
-    public override func didApplyConstraints(){
+    open override func didApplyConstraints(){
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
             element.didApplyConstraints(node)
             return
         }
     }
 
-    public override func didFinishUpdate(){
+    open override func didFinishUpdate(){
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
             element.didFinishUpdate(node)
             return
         }
     }
     
-    public override func didMoveToView(view: SKView){
+    open override func didMove(to view: SKView){
         physicsWorld.contactDelegate = self;
         
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-            element.didMoveToView(view, node: node)
+            element.didMove(toView: view, node: node)
             return
         }
     }
     
-    public override func willMoveFromView(view: SKView){
+    open override func willMove(from view: SKView){
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-            element.willMoveFromView(view, node: node)
+            element.willMove(fromView: view, node: node)
             return
         }
     }
     
-    public override func didChangeSize(oldSize: CGSize){
+    open override func didChangeSize(_ oldSize: CGSize){
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-           element.didChangeSize(oldSize, node: node)
+            element.didChange(size: oldSize, node: node)
             return
         }
     }
     
-    public func didBeginContact(contact: SKPhysicsContact) {
+    open func didBegin(_ contact: SKPhysicsContact) {
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-            if let nodeA = contact.bodyA.node, let nodeB = contact.bodyB.node where nodeA.isEqualToNode(node) || nodeB.isEqualToNode(node) {
-                element.didBeginContact(contact, node: node)
+            if let nodeA = contact.bodyA.node, let nodeB = contact.bodyB.node , nodeA.isEqual(to: node) || nodeB.isEqual(to: node) {
+                element.didBegin(contact: contact, node: node)
             }
             return
         }
     }
 
-    public func didEndContact(contact: SKPhysicsContact) {
+    open func didEnd(_ contact: SKPhysicsContact) {
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-            if let nodeA = contact.bodyA.node, let nodeB = contact.bodyB.node where nodeA.isEqualToNode(node) || nodeB.isEqualToNode(node) {
-                element.didEndContact(contact, node: node)
+            if let nodeA = contact.bodyA.node, let nodeB = contact.bodyB.node , nodeA.isEqual(to: node) || nodeB.isEqual(to: node) {
+                element.didEnd(contact: contact, node: node)
             }
             return
         }

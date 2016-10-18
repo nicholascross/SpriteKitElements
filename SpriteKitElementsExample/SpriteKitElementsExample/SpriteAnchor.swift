@@ -18,36 +18,36 @@ class SpriteAnchor : SpriteElement {
         self.anchorPoint = anchor
     }
     
-    func didChangeSize(oldSize: CGSize, node: SKNode) {
+    func didChange(size oldSize: CGSize, node: SKNode) {
         if let scene = node.scene {
             self.anchorPoint.updatePosition(node, scene: scene)
         }
     }
     
-    func didAttach(node: SKNode, inScene scene:SpriteElementScene) {
+    func didAttach(toNode node: SKNode, inScene scene:SpriteElementScene) {
         self.anchorPoint.updatePosition(node, scene: scene)
     }
 
 }
 
 enum SpriteAnchorPoint {
-    case LeadingEdge(CGFloat)
-    case TrailingEdge(CGFloat)
-    case TopEdge(CGFloat)
-    case BottomEdge(CGFloat)
-    case Center(CGFloat, CGFloat)
+    case leadingEdge(CGFloat)
+    case trailingEdge(CGFloat)
+    case topEdge(CGFloat)
+    case bottomEdge(CGFloat)
+    case center(CGFloat, CGFloat)
     
-    func updatePosition(node: SKNode, scene: SKScene) {
+    func updatePosition(_ node: SKNode, scene: SKScene) {
         switch(self) {
-        case LeadingEdge(let x):
+        case .leadingEdge(let x):
             node.position = CGPoint(x: x, y: node.position.y)
-        case TrailingEdge(let x):
+        case .trailingEdge(let x):
             node.position = CGPoint(x: scene.size.width - x, y: node.position.y)
-        case TopEdge(let y):
+        case .topEdge(let y):
             node.position = CGPoint(x: node.position.x, y: scene.size.height - y)
-        case BottomEdge(let y):
+        case .bottomEdge(let y):
             node.position = CGPoint(x: node.position.x, y: y)
-        case Center(let x, let y):
+        case .center(let x, let y):
             node.position = CGPoint(x: scene.size.width / 2 + x, y: scene.size.height / 2 + y)
         }
     }

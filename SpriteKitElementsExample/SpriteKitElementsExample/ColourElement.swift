@@ -14,11 +14,11 @@ import SpriteKitElements
     
     let hue = SpriteEssence<CGFloat>()
     
-    func didAttach(node: SKNode, inScene scene: SpriteElementScene) {
+    func didAttach(toNode node: SKNode, inScene scene: SpriteElementScene) {
         node.physicsBody?.contactTestBitMask = 1;
     }
     
-    func didBeginContact(contact: SKPhysicsContact, node: SKNode) {
+    func didBegin(contact: SKPhysicsContact, node: SKNode) {
         if let h = hue[node] {
             hue[node] = h + 0.05
         }
@@ -35,7 +35,7 @@ import SpriteKitElements
         }
     }
     
-    func didEndContact(contact: SKPhysicsContact, node: SKNode) {
+    func didEnd(contact: SKPhysicsContact, node: SKNode) {
         /*if let scene = node.scene as? SpriteElementScene {
             scene.detachElement(self, fromNode: node)
         }*/

@@ -12,21 +12,21 @@ import SpriteKitElements
 class GameScene: SpriteElementScene {
 
     //Attaching an element to a node does not create a strong reference, if the element is not otherwise retained it will be freed and subsequent element methods will not be called
-    private let topMargin = SpriteAnchor(anchor: SpriteAnchorPoint.TopEdge(80))
-    private let bottomMargin = SpriteAnchor(anchor: SpriteAnchorPoint.BottomEdge(80))
-    private let rightMargin = SpriteAnchor(anchor: SpriteAnchorPoint.TrailingEdge(80))
-    private let leftMargin = SpriteAnchor(anchor: SpriteAnchorPoint.LeadingEdge(80))
-    private let centerPoint = SpriteAnchor(anchor: SpriteAnchorPoint.Center(0, 0))
-    private let lifeCycle = LifeCycleElement()
-    private let orbit = OrbitElement()
-    private let colour = ColourElement()
+    fileprivate let topMargin = SpriteAnchor(anchor: SpriteAnchorPoint.topEdge(80))
+    fileprivate let bottomMargin = SpriteAnchor(anchor: SpriteAnchorPoint.bottomEdge(80))
+    fileprivate let rightMargin = SpriteAnchor(anchor: SpriteAnchorPoint.trailingEdge(80))
+    fileprivate let leftMargin = SpriteAnchor(anchor: SpriteAnchorPoint.leadingEdge(80))
+    fileprivate let centerPoint = SpriteAnchor(anchor: SpriteAnchorPoint.center(0, 0))
+    fileprivate let lifeCycle = LifeCycleElement()
+    fileprivate let orbit = OrbitElement()
+    fileprivate let colour = ColourElement()
     
-    override func didMoveToView(view: SKView) {
-        let topLeftNode = self.childNodeWithName("TopLeft")!
-        let bottomLeftNode = self.childNodeWithName("BottomLeft")!
-        let topRightNode = self.childNodeWithName("TopRight")!
-        let bottomRightNode = self.childNodeWithName("BottomRight")!
-        let centerNode = self.childNodeWithName("Center")!
+    override func didMove(to view: SKView) {
+        let topLeftNode = self.childNode(withName: "TopLeft")!
+        let bottomLeftNode = self.childNode(withName: "BottomLeft")!
+        let topRightNode = self.childNode(withName: "TopRight")!
+        let bottomRightNode = self.childNode(withName: "BottomRight")!
+        let centerNode = self.childNode(withName: "Center")!
 
         attachElement(topMargin,toNode: topLeftNode);
         attachElement(leftMargin,toNode: topLeftNode);
@@ -49,7 +49,7 @@ class GameScene: SpriteElementScene {
         //log when ever an element method is called
         //attachElement(lifeCycle, toNode: centerNode)
         
-        attachElement(colour, toNode: centerNode.childNodeWithName("orbit")!)
+        attachElement(colour, toNode: centerNode.childNode(withName: "orbit")!)
         
         for child in children {
             
@@ -60,7 +60,7 @@ class GameScene: SpriteElementScene {
         
         self.size = view.frame.size
         
-        super.didMoveToView(view)
+        super.didMove(to: view)
         
         //Note: if we attempted to attach an element after did move to view the element method didMoveToView, didChangeSize would not to be called on the node!
         //attachElement(lifeCycle, toNode: centerNode)

@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 
 class SpriteElementReference {
-    private weak var value : SpriteElement?
+    fileprivate weak var value : SpriteElement?
     
     init (value: SpriteElement) {
         self.value = value

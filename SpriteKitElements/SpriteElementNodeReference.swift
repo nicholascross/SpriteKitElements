@@ -11,8 +11,8 @@ func == (lhs: SpriteElementNodeReference, rhs: SpriteElementNodeReference) -> Bo
 }
 
 class SpriteElementNodeReference: Hashable, Equatable {
-    private weak var value : SKNode?
-    private var hash: Int
+    fileprivate weak var value : SKNode?
+    fileprivate var hash: Int
 
     init (value: SKNode) {
         self.value = value

@@ -11,19 +11,19 @@ import SpriteKit
 
 var kSpriteEssence: UInt8 = 0
 
-public class SpriteEssence<Essence> {
+open class SpriteEssence<Essence> {
     
     let key: String
     
     public init() {
-        key = NSUUID().UUIDString
+        key = UUID().uuidString
     }
     
     public init(key: String) {
         self.key = key
     }
     
-    public subscript(node: SKNode) -> Essence? {
+    open subscript(node: SKNode) -> Essence? {
         get {
             if let vessel = objc_getAssociatedObject(node, &kSpriteEssence) as? SpriteEssenceVessel {
                 return vessel[key] as? Essence

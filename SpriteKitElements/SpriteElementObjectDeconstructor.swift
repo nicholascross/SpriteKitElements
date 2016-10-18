@@ -12,9 +12,9 @@ var kObjectDeconstructorKey = "ObjectDeconstructorKey"
 
 @objc class SpriteElementObjectDeconstructor : NSObject {
     
-    private var callbacks: [()->()]
+    fileprivate var callbacks: [()->()]
     
-    init(callback: ()->()) {
+    init(callback: @escaping ()->()) {
         self.callbacks = [callback]
     }
     
@@ -24,7 +24,7 @@ var kObjectDeconstructorKey = "ObjectDeconstructorKey"
         }
     }
     
-    class func registerDeconstructor(object:AnyObject, callback: ()->()) {
+    class func registerDeconstructor(_ object:AnyObject, callback: @escaping ()->()) {
         let existingDecon = objc_getAssociatedObject(object,  &kObjectDeconstructorKey) as! SpriteElementObjectDeconstructor?
         
         if let decon = existingDecon {

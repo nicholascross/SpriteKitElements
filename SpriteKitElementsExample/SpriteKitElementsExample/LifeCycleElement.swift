@@ -11,39 +11,39 @@ import SpriteKitElements
 import SpriteKit
 
 @objc class LifeCycleElement : NSObject, SpriteElement {
-    func didAttach(node: SKNode, inScene scene:SpriteElementScene) {
+    func didAttach(toNode node: SKNode, inScene scene:SpriteElementScene) {
         print("didAttach")
     }
     
-    func update(currentTime: NSTimeInterval, delta: NSTimeInterval, node: SKNode){
+    func update(atTime currentTime: TimeInterval, delta: TimeInterval, node: SKNode){
         print("update currentTime:\(currentTime) delta:\(delta)")
     }
     
-    func didEvaluateActions(node: SKNode){
+    func didEvaluateActions(_ node: SKNode){
         print("didEvaluateActions")
     }
     
-    func didSimulatePhysics(node: SKNode){
+    func didSimulatePhysics(_ node: SKNode){
         print("didSimulatePhysics")
     }
     
-    func didApplyConstraints(node: SKNode){
+    func didApplyConstraints(_ node: SKNode){
         print("didApplyConstraints")
     }
     
-    func didFinishUpdate(node: SKNode){
+    func didFinishUpdate(_ node: SKNode){
         print("didFinishUpdate")
     }
     
-    func didMoveToView(view: SKView!, node: SKNode){
+    func didMove(toView view: SKView!, node: SKNode){
         print("didMoveToView")
     }
     
-    func willMoveFromView(view: SKView!, node: SKNode){
+    func willMove(fromView view: SKView!, node: SKNode){
         print("willMoveFromView")
     }
     
-    func didChangeSize(oldSize: CGSize, node: SKNode){
+    func didChange(size oldSize: CGSize, node: SKNode){
         print("didChangeSize")
     }
 

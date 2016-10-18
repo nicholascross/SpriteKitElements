@@ -17,14 +17,14 @@ import SpriteKitElements
     
     //note that elements that maintain internal state it cannot always be shared between nodes and behave as intended
 
-    func update(currentTime: NSTimeInterval, delta: NSTimeInterval, node: SKNode){
-        if let node = node.childNodeWithName("orbit") {
+    func update(atTime currentTime: TimeInterval, delta: TimeInterval, node: SKNode){
+        if let node = node.childNode(withName: "orbit") {
             updateParticlePosition(node, currentTime: currentTime, delta: delta)
         }
     }
     
-    func updateParticlePosition(particle: SKNode, currentTime: NSTimeInterval, delta: NSTimeInterval) {
-        let orbit = (Double(currentTime) % period) / period
+    func updateParticlePosition(_ particle: SKNode, currentTime: TimeInterval, delta: TimeInterval) {
+        let orbit = (Double(currentTime).truncatingRemainder(dividingBy: period)) / period
         let angle: CGFloat = CGFloat(orbit * M_PI * 2)
         particle.position = CGPoint(x: cos(angle) * radius, y: sin(angle) * radius)
     }
