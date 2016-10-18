@@ -28,28 +28,28 @@ Implement any of the optional methods in this interface to perform specific acti
 
 ```swift
 	//Called when an element is first attached to a node
-    func didAttach(node: SKNode, inScene scene:SpriteElementScene)
+    func didAttach(toNode node: SKNode, inScene scene:SpriteElementScene)
     
     //Called during scene update, delta is the time since the last scene update
-    func update(currentTime: NSTimeInterval, delta: NSTimeInterval, node: SKNode)
+    func update(atTime currentTime: NSTimeInterval, delta: NSTimeInterval, node: SKNode)
 
-    func didEvaluateActions(node: SKNode)
+    func didEvaluateActions(_ node: SKNode)
 
-    func didSimulatePhysics(node: SKNode)
+    func didSimulatePhysics(_ node: SKNode)
 
-    func didApplyConstraints(node: SKNode)
+    func didApplyConstraints(_ node: SKNode)
 
-    func didFinishUpdate(node: SKNode)
+    func didFinishUpdate(_ node: SKNode)
 
-    func didMoveToView(view: SKView!, node: SKNode)
+    func didMove(toView view: SKView!, node: SKNode)
 
-    func willMoveFromView(view: SKView!, node: SKNode)
+    func willMove(fromView view: SKView!, node: SKNode)
 
-    func didChangeSize(oldSize: CGSize, node: SKNode)
+    func didChange(size oldSize: CGSize, node: SKNode)
     
-    func didBeginContact(contact: SKPhysicsContact, node: SKNode)
+    func didBegin(contact contact: SKPhysicsContact, node: SKNode)
     
-    func didEndContact(contact: SKPhysicsContact, node: SKNode)
+    func didEnd(contact contact: SKPhysicsContact, node: SKNode)
 ```
 
 # SpriteEssence (class)
@@ -70,11 +70,11 @@ import SpriteKit
     
     let hue = SpriteEssence<CGFloat>()
     
-    func didAttach(node: SKNode, inScene scene: SpriteElementScene) {
+    func didAttach(toNode node: SKNode, inScene scene: SpriteElementScene) {
         node.physicsBody?.contactTestBitMask = 1;
     }
     
-    func didBeginContact(contact: SKPhysicsContact, node: SKNode) {
+    func didBegin(contact: SKPhysicsContact, node: SKNode) {
         if let h = hue[node] {
             hue[node] = h + 0.05
         }
