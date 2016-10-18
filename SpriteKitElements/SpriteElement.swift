@@ -23,9 +23,9 @@ public protocol SpriteElement : class {
 
     func didFinishUpdate(_ node: SKNode)
 
-    func didMove(toView view: SKView!, node: SKNode)
+    func didMove(toView view: SKView, node: SKNode)
 
-    func willMove(fromView view: SKView!, node: SKNode)
+    func willMove(fromView view: SKView, node: SKNode)
 
     func didChange(size oldSize: CGSize, node: SKNode)
 
@@ -59,11 +59,11 @@ public extension SpriteElement {
         
     }
     
-    func didMove(toView view: SKView!, node: SKNode) {
+    func didMove(toView view: SKView, node: SKNode) {
         
     }
     
-    func willMove(fromView view: SKView!, node: SKNode) {
+    func willMove(fromView view: SKView, node: SKNode) {
         
     }
     

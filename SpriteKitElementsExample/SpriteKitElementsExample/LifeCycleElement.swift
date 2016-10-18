@@ -35,11 +35,11 @@ import SpriteKit
         print("didFinishUpdate")
     }
     
-    func didMove(toView view: SKView!, node: SKNode){
+    func didMove(toView view: SKView, node: SKNode){
         print("didMoveToView")
     }
     
-    func willMove(fromView view: SKView!, node: SKNode){
+    func willMove(fromView view: SKView, node: SKNode){
         print("willMoveFromView")
     }
     
