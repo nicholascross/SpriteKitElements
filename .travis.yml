@@ -6,4 +6,4 @@ xcode_scheme: SpriteKitElementsiOS
 osx_image: xcode8
 script:
   - xcodebuild -scheme SpriteKitElementsiOS -project SpriteKitElementsExample/SpriteKitElementsExample.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=10.0' build
-  - xcodebuild -scheme SpriteKitElementsTV -project SpriteKitElementsExample/SpriteKitElementsExample.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=10.0' build
+  - xcodebuild -scheme SpriteKitElementsTV -project SpriteKitElementsExample/SpriteKitElementsExample.xcodeproj -sdk iphonesimulator -destination 'platform=tvOS Simulator,name=Apple TV 1080p,OS=10.0' build
