@@ -1,4 +1,6 @@
 # SpriteKitElements
+![build status](https://travis-ci.org/nicholascross/SpriteKitElements.svg?branch=master)
+
 A small swift framework for attaching additional functionality to any SKNode with out the need to sub class.  This means you can design your scene in Xcode and attach reusable behaviours to any SKNode such as SKLightNode, SKEmitterNode, etc
 
 ## Alternatives
