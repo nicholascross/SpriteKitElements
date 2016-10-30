@@ -11,9 +11,8 @@ import SpriteKit
 
 open class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
 
-    fileprivate var lastUpdateTime: TimeInterval?
-    fileprivate var attachedElements: [SpriteElementNodeReference: [SpriteElementReference]] = [:]
-
+    private var lastUpdateTime: TimeInterval?
+    private var attachedElements: [SpriteElementNodeReference: [SpriteElementReference]] = [:]
     open func attachElement(_ element: SpriteElement, toNode node: SKNode) {
        
         let nodeRef = SpriteElementNodeReference(value: node)
@@ -55,7 +54,7 @@ open class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
         }
     }
        
-    fileprivate func _enumerateSpriteElements(_ callback: (_ element: SpriteElement, _ node: SKNode)->()) {
+    private func _enumerateSpriteElements(_ callback: (_ element: SpriteElement, _ node: SKNode)->()) {
         for (nodeRef, elements) in self.attachedElements {
             if let node = nodeRef.node {
                 for elementReference in elements {
