@@ -118,9 +118,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E1014F601DC42CEC00E46D31 /* SpriteKitElements */ = {
+		E1014F601DC42CEC00E46D31 /* SpriteKitElements-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1014F751DC42CEC00E46D31 /* Build configuration list for PBXNativeTarget "SpriteKitElements" */;
+			buildConfigurationList = E1014F751DC42CEC00E46D31 /* Build configuration list for PBXNativeTarget "SpriteKitElements-iOS" */;
 			buildPhases = (
 				E1014F5C1DC42CEC00E46D31 /* Sources */,
 				E1014F5D1DC42CEC00E46D31 /* Frameworks */,
@@ -131,14 +131,14 @@
 			);
 			dependencies = (
 			);
-			name = SpriteKitElements;
+			name = "SpriteKitElements-iOS";
 			productName = SpriteKitElements;
 			productReference = E1014F611DC42CEC00E46D31 /* SpriteKitElements.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E1014F691DC42CEC00E46D31 /* SpriteKitElementsTests */ = {
+		E1014F691DC42CEC00E46D31 /* SpriteKitElementsTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1014F781DC42CEC00E46D31 /* Build configuration list for PBXNativeTarget "SpriteKitElementsTests" */;
+			buildConfigurationList = E1014F781DC42CEC00E46D31 /* Build configuration list for PBXNativeTarget "SpriteKitElementsTests-iOS" */;
 			buildPhases = (
 				E1014F661DC42CEC00E46D31 /* Sources */,
 				E1014F671DC42CEC00E46D31 /* Frameworks */,
@@ -149,7 +149,7 @@
 			dependencies = (
 				E1014F6D1DC42CEC00E46D31 /* PBXTargetDependency */,
 			);
-			name = SpriteKitElementsTests;
+			name = "SpriteKitElementsTests-iOS";
 			productName = SpriteKitElementsTests;
 			productReference = E1014F6A1DC42CEC00E46D31 /* SpriteKitElementsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -189,8 +189,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E1014F601DC42CEC00E46D31 /* SpriteKitElements */,
-				E1014F691DC42CEC00E46D31 /* SpriteKitElementsTests */,
+				E1014F601DC42CEC00E46D31 /* SpriteKitElements-iOS */,
+				E1014F691DC42CEC00E46D31 /* SpriteKitElementsTests-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -239,7 +239,7 @@
 /* Begin PBXTargetDependency section */
 		E1014F6D1DC42CEC00E46D31 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E1014F601DC42CEC00E46D31 /* SpriteKitElements */;
+			target = E1014F601DC42CEC00E46D31 /* SpriteKitElements-iOS */;
 			targetProxy = E1014F6C1DC42CEC00E46D31 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -358,7 +358,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElements;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SpriteKitElements;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -379,7 +379,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElements;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SpriteKitElements;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -393,7 +393,7 @@
 				INFOPLIST_FILE = SpriteKitElementsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElementsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SpriteKitElementsTests;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -406,7 +406,7 @@
 				INFOPLIST_FILE = SpriteKitElementsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElementsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SpriteKitElementsTests;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -423,21 +423,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1014F751DC42CEC00E46D31 /* Build configuration list for PBXNativeTarget "SpriteKitElements" */ = {
+		E1014F751DC42CEC00E46D31 /* Build configuration list for PBXNativeTarget "SpriteKitElements-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1014F761DC42CEC00E46D31 /* Debug */,
 				E1014F771DC42CEC00E46D31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		E1014F781DC42CEC00E46D31 /* Build configuration list for PBXNativeTarget "SpriteKitElementsTests" */ = {
+		E1014F781DC42CEC00E46D31 /* Build configuration list for PBXNativeTarget "SpriteKitElementsTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1014F791DC42CEC00E46D31 /* Debug */,
 				E1014F7A1DC42CEC00E46D31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
