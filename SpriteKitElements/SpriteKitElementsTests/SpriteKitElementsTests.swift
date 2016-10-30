@@ -94,6 +94,12 @@ class SpriteKitElementsTests: XCTestCase {
         XCTAssert(element.didEndContactForElement, "Expected didEnd to be called")
     }
     
+    func testDetach() {
+        elementScene.detachElement(element, fromNode: node)
+        elementScene.update(0)
+        
+        XCTAssert(!element.didUpdateElement, "Expected element to be detached before update was called")
+    }
 }
 
 class MockElement : SpriteElement {
