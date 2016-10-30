@@ -13,6 +13,16 @@ open class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
 
     private var lastUpdateTime: TimeInterval?
     private var attachedElements: [SpriteElementNodeReference: [SpriteElementReference]] = [:]
+    
+    var nodeInvolvedInContact: (SKNode, SKPhysicsContact) -> Bool = {
+        node, contact in
+        guard let nodeA = contact.bodyA.node, let nodeB = contact.bodyB.node , nodeA.isEqual(to: node) || nodeB.isEqual(to: node) else {
+            return false
+        }
+        
+        return true
+    }
+    
     open func attachElement(_ element: SpriteElement, toNode node: SKNode) {
        
         let nodeRef = SpriteElementNodeReference(value: node)
@@ -135,18 +145,20 @@ open class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
     
     open func didBegin(_ contact: SKPhysicsContact) {
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-            if let nodeA = contact.bodyA.node, let nodeB = contact.bodyB.node , nodeA.isEqual(to: node) || nodeB.isEqual(to: node) {
+            if nodeInvolvedInContact(node, contact) {
                 element.didBegin(contact: contact, node: node)
             }
+            
             return
         }
     }
 
     open func didEnd(_ contact: SKPhysicsContact) {
         _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-            if let nodeA = contact.bodyA.node, let nodeB = contact.bodyB.node , nodeA.isEqual(to: node) || nodeB.isEqual(to: node) {
+            if nodeInvolvedInContact(node, contact) {
                 element.didEnd(contact: contact, node: node)
             }
+            
             return
         }
     }
