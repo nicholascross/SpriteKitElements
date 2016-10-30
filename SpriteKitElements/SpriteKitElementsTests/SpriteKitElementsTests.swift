@@ -100,6 +100,19 @@ class SpriteKitElementsTests: XCTestCase {
         
         XCTAssert(!element.didUpdateElement, "Expected element to be detached before update was called")
     }
+    
+    func testNodeMemoyManagement() {
+        weak var n = node
+        node = nil
+        XCTAssert(n == nil, "Expected node to be released")
+    }
+    
+    func testElementMemoyManagement() {
+        weak var e = element
+        element = nil
+        XCTAssert(e == nil, "Expected element to be released")
+    }
+    
 }
 
 class MockElement : SpriteElement {
