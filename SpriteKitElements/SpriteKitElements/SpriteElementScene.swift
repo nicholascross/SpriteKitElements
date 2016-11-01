@@ -20,7 +20,7 @@ open class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
     
     var nodeInvolvedInContact: (SKNode, SKPhysicsContact) -> Bool = {
         node, contact in
-        guard let nodeA = contact.bodyA.node, let nodeB = contact.bodyB.node , nodeA.isEqual(to: node) || nodeB.isEqual(to: node) else {
+        guard let nodeA = contact.bodyA.node, let nodeB = contact.bodyB.node , nodeA === node || nodeB === node else {
             return false
         }
         
