@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E1BDC5751C7061BB001DEA28"
-               BuildableName = "SpriteKitElementsTV.framework"
-               BlueprintName = "SpriteKitElementsTV"
-               ReferencedContainer = "container:SpriteKitElementsFramework.xcodeproj">
+               BlueprintIdentifier = "E11889931DC8623C001D06C8"
+               BuildableName = "SpriteKitElements.framework"
+               BlueprintName = "SpriteKitElements-tvOS"
+               ReferencedContainer = "container:SpriteKitElements.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,12 +28,31 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E118899B1DC8623D001D06C8"
+               BuildableName = "SpriteKitElementsTests-tvOS.xctest"
+               BlueprintName = "SpriteKitElementsTests-tvOS"
+               ReferencedContainer = "container:SpriteKitElements.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E11889931DC8623C001D06C8"
+            BuildableName = "SpriteKitElements.framework"
+            BlueprintName = "SpriteKitElements-tvOS"
+            ReferencedContainer = "container:SpriteKitElements.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -45,10 +64,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E1BDC5751C7061BB001DEA28"
-            BuildableName = "SpriteKitElementsTV.framework"
-            BlueprintName = "SpriteKitElementsTV"
-            ReferencedContainer = "container:SpriteKitElementsFramework.xcodeproj">
+            BlueprintIdentifier = "E11889931DC8623C001D06C8"
+            BuildableName = "SpriteKitElements.framework"
+            BlueprintName = "SpriteKitElements-tvOS"
+            ReferencedContainer = "container:SpriteKitElements.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +82,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E1BDC5751C7061BB001DEA28"
-            BuildableName = "SpriteKitElementsTV.framework"
-            BlueprintName = "SpriteKitElementsTV"
-            ReferencedContainer = "container:SpriteKitElementsFramework.xcodeproj">
+            BlueprintIdentifier = "E11889931DC8623C001D06C8"
+            BuildableName = "SpriteKitElements.framework"
+            BlueprintName = "SpriteKitElements-tvOS"
+            ReferencedContainer = "container:SpriteKitElements.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

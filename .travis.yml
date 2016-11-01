@@ -1,9 +1,19 @@
 os:
   - osx
 language: swift
-xcode_project: SpriteKitElementsExample/SpriteKitElementsFramework/SpriteKitElementsFramework.xcodeproj
-xcode_scheme: SpriteKitElementsiOS
 osx_image: xcode8
 script:
-  - xcodebuild -scheme SpriteKitElementsiOS -project SpriteKitElementsExample/SpriteKitElementsExample.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=10.0' build
-  - xcodebuild -scheme SpriteKitElementsTV -project SpriteKitElementsExample/SpriteKitElementsExample.xcodeproj -sdk iphonesimulator -destination 'platform=tvOS Simulator,name=Apple TV 1080p,OS=10.0' build
+  - xcodebuild -enableCodeCoverage YES -scheme SpriteKitElements-iOS -workspace SpriteKitElements.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.0' build test GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+  - xcodebuild -scheme SpriteKitElements-iOS -workspace SpriteKitElements.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=10.0' build test
+  - xcodebuild -scheme SpriteKitElements-tvOS -workspace SpriteKitElements.xcworkspace -sdk appletvsimulator -destination 'platform=tvOS Simulator,name=Apple TV 1080p,OS=10.0' build test
+  - xcodebuild -scheme SpriteKitElements-macOS -workspace SpriteKitElements.xcworkspace build test
+  - gem install cocoapods
+  - pod repo update --silent
+  - pod lib lint --allow-warnings
+before_install:
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+before_script:
+  - carthage bootstrap  
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

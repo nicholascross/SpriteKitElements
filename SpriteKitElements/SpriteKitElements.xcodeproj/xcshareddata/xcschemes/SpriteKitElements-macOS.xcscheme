@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E1BDC5581C70580B001DEA28"
+               BlueprintIdentifier = "E11889B71DC86390001D06C8"
                BuildableName = "SpriteKitElements.framework"
-               BlueprintName = "SpriteKitElements"
-               ReferencedContainer = "container:SpriteKitElementsFramework.xcodeproj">
+               BlueprintName = "SpriteKitElements-macOS"
+               ReferencedContainer = "container:SpriteKitElements.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,12 +28,31 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E11889BF1DC86390001D06C8"
+               BuildableName = "SpriteKitElementsTests-macOS.xctest"
+               BlueprintName = "SpriteKitElementsTests-macOS"
+               ReferencedContainer = "container:SpriteKitElements.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E11889B71DC86390001D06C8"
+            BuildableName = "SpriteKitElements.framework"
+            BlueprintName = "SpriteKitElements-macOS"
+            ReferencedContainer = "container:SpriteKitElements.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -45,10 +64,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E1BDC5581C70580B001DEA28"
+            BlueprintIdentifier = "E11889B71DC86390001D06C8"
             BuildableName = "SpriteKitElements.framework"
-            BlueprintName = "SpriteKitElements"
-            ReferencedContainer = "container:SpriteKitElementsFramework.xcodeproj">
+            BlueprintName = "SpriteKitElements-macOS"
+            ReferencedContainer = "container:SpriteKitElements.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +82,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E1BDC5581C70580B001DEA28"
+            BlueprintIdentifier = "E11889B71DC86390001D06C8"
             BuildableName = "SpriteKitElements.framework"
-            BlueprintName = "SpriteKitElements"
-            ReferencedContainer = "container:SpriteKitElementsFramework.xcodeproj">
+            BlueprintName = "SpriteKitElements-macOS"
+            ReferencedContainer = "container:SpriteKitElements.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

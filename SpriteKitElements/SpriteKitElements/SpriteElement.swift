@@ -29,9 +29,9 @@ public protocol SpriteElement : class {
 
     func didChange(size oldSize: CGSize, node: SKNode)
 
-    func didBegin(contact contact: SKPhysicsContact, node: SKNode)
+    func didBegin(contact: SKPhysicsContact, node: SKNode)
     
-    func didEnd(contact contact: SKPhysicsContact, node: SKNode)
+    func didEnd(contact: SKPhysicsContact, node: SKNode)
 }
 
 public extension SpriteElement {
@@ -71,11 +71,11 @@ public extension SpriteElement {
         
     }
     
-    func didBegin(contact contact: SKPhysicsContact, node: SKNode) {
+    func didBegin(contact: SKPhysicsContact, node: SKNode) {
         
     }
     
-    func didEnd(contact contact: SKPhysicsContact, node: SKNode) {
+    func didEnd(contact: SKPhysicsContact, node: SKNode) {
         
     }
 }
