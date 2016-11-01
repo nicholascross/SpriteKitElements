@@ -110,9 +110,28 @@ class SpriteKitElementsTests: XCTestCase {
     func testElementMemoyManagement() {
         weak var e = element
         element = nil
-        XCTAssert(e == nil, "Expected element to be released")
+        XCTAssert(e != nil, "Expected element to be retained because it is still attached to a node")
+        
+        node = nil
+        elementScene.update(0)
+        XCTAssert(e == nil, "Expected element to be released when node is deallocated after update")
     }
     
+    func testElementReaping() {
+        weak var e = element
+        element = nil
+        XCTAssert(e != nil, "Expected element to be retained because it is still attached to a node")
+        
+        elementScene.update(0)
+        XCTAssert(e != nil, "Expected element to be retained because it is still attached to a node")
+        
+        node = nil
+        elementScene.update(2)
+        XCTAssert(e != nil, "Expected element to be retained because the scene has not reached the reaping interval")
+        
+        elementScene.update(6)
+        XCTAssert(e == nil, "Expected element to be released because the scene has passed the reaping interval")
+    }
 }
 
 class MockElement : SpriteElement {

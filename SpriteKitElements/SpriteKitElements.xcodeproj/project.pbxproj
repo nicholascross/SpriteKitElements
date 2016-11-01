@@ -12,10 +12,8 @@
 		E1014F721DC42CEC00E46D31 /* SpriteKitElements.h in Headers */ = {isa = PBXBuildFile; fileRef = E1014F641DC42CEC00E46D31 /* SpriteKitElements.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1014F811DC42D1300E46D31 /* SpriteElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F7B1DC42D1300E46D31 /* SpriteElement.swift */; };
 		E1014F821DC42D1300E46D31 /* SpriteElementEssence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F7C1DC42D1300E46D31 /* SpriteElementEssence.swift */; };
-		E1014F831DC42D1300E46D31 /* SpriteElementNodeReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F7D1DC42D1300E46D31 /* SpriteElementNodeReference.swift */; };
-		E1014F841DC42D1300E46D31 /* SpriteElementObjectDeconstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F7E1DC42D1300E46D31 /* SpriteElementObjectDeconstructor.swift */; };
-		E1014F851DC42D1300E46D31 /* SpriteElementReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F7F1DC42D1300E46D31 /* SpriteElementReference.swift */; };
 		E1014F861DC42D1300E46D31 /* SpriteElementScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F801DC42D1300E46D31 /* SpriteElementScene.swift */; };
+		E1DF9B511DC6C8FC0081119E /* WeakDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DF9B501DC6C8FC0081119E /* WeakDictionary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +35,8 @@
 		E1014F711DC42CEC00E46D31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1014F7B1DC42D1300E46D31 /* SpriteElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteElement.swift; sourceTree = "<group>"; };
 		E1014F7C1DC42D1300E46D31 /* SpriteElementEssence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteElementEssence.swift; sourceTree = "<group>"; };
-		E1014F7D1DC42D1300E46D31 /* SpriteElementNodeReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteElementNodeReference.swift; sourceTree = "<group>"; };
-		E1014F7E1DC42D1300E46D31 /* SpriteElementObjectDeconstructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteElementObjectDeconstructor.swift; sourceTree = "<group>"; };
-		E1014F7F1DC42D1300E46D31 /* SpriteElementReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteElementReference.swift; sourceTree = "<group>"; };
 		E1014F801DC42D1300E46D31 /* SpriteElementScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteElementScene.swift; sourceTree = "<group>"; };
+		E1DF9B501DC6C8FC0081119E /* WeakDictionary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeakDictionary.framework; path = "../Carthage/Checkouts/WeakDictionary/build/Debug-iphoneos/WeakDictionary.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1DF9B511DC6C8FC0081119E /* WeakDictionary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +65,7 @@
 				E1014F631DC42CEC00E46D31 /* SpriteKitElements */,
 				E1014F6E1DC42CEC00E46D31 /* SpriteKitElementsTests */,
 				E1014F621DC42CEC00E46D31 /* Products */,
+				E1F7DC521DC5F68700C5B38E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,9 +83,6 @@
 			children = (
 				E1014F7B1DC42D1300E46D31 /* SpriteElement.swift */,
 				E1014F7C1DC42D1300E46D31 /* SpriteElementEssence.swift */,
-				E1014F7D1DC42D1300E46D31 /* SpriteElementNodeReference.swift */,
-				E1014F7E1DC42D1300E46D31 /* SpriteElementObjectDeconstructor.swift */,
-				E1014F7F1DC42D1300E46D31 /* SpriteElementReference.swift */,
 				E1014F801DC42D1300E46D31 /* SpriteElementScene.swift */,
 				E1014F641DC42CEC00E46D31 /* SpriteKitElements.h */,
 				E1014F651DC42CEC00E46D31 /* Info.plist */,
@@ -102,6 +97,14 @@
 				E1014F711DC42CEC00E46D31 /* Info.plist */,
 			);
 			path = SpriteKitElementsTests;
+			sourceTree = "<group>";
+		};
+		E1F7DC521DC5F68700C5B38E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1DF9B501DC6C8FC0081119E /* WeakDictionary.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,12 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1014F841DC42D1300E46D31 /* SpriteElementObjectDeconstructor.swift in Sources */,
 				E1014F821DC42D1300E46D31 /* SpriteElementEssence.swift in Sources */,
-				E1014F851DC42D1300E46D31 /* SpriteElementReference.swift in Sources */,
 				E1014F811DC42D1300E46D31 /* SpriteElement.swift in Sources */,
 				E1014F861DC42D1300E46D31 /* SpriteElementScene.swift in Sources */,
-				E1014F831DC42D1300E46D31 /* SpriteElementNodeReference.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -333,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -354,6 +354,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SpriteKitElements/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -375,6 +379,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SpriteKitElements/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
