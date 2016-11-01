@@ -7,5 +7,10 @@ script:
   - xcodebuild -scheme SpriteKitElements-iOS -workspace SpriteKitElements.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=10.0' build test
   - xcodebuild -scheme SpriteKitElements-tvOS -workspace SpriteKitElements.xcworkspace -sdk appletvsimulator -destination 'platform=tvOS Simulator,name=Apple TV 1080p,OS=10.0' build test
   - xcodebuild -scheme SpriteKitElements-macOS -workspace SpriteKitElements.xcworkspace build test
+before_install:
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+before_script:
+  - carthage bootstrap  
 after_success:
   - bash <(curl -s https://codecov.io/bash)
