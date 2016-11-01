@@ -59,7 +59,7 @@ Any SKSpriteNode with this element attached will progressively change colour as 
 import Foundation
 import SpriteKit
 
-@objc class ColourElement : SpriteElement {
+class ColourElement : SpriteElement {
     
     let hue = SpriteEssence<CGFloat>()
     
