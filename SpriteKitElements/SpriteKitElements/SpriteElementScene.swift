@@ -73,7 +73,6 @@ open class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
         
         if lastReapTime == nil || currentTime - lastReapTime! > elementReapInterval {
             self.attachedElements.reap()
-            reapEssences()
             self.lastReapTime = currentTime
         }
         

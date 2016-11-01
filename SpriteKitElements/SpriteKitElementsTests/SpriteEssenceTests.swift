@@ -52,9 +52,6 @@ class SpriteEssenceTests: XCTestCase {
         XCTAssert(releaseLater != nil, "Expected essence value to be retained")
         
         node = nil
-        XCTAssert(releaseLater != nil, "Expected essence value to be retained")
-        
-        reapEssences()
         XCTAssert(releaseLater == nil, "Expected essence value to be released")
     }
 }

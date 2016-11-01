@@ -8,13 +8,6 @@
 
 import Foundation
 import SpriteKit
-import WeakDictionary
-
-fileprivate var essences: WeakKeyDictionary<SKNode, SpriteEssenceVessel> = WeakKeyDictionary<SKNode, SpriteEssenceVessel>(withValuesRetainedByKey: true)
-
-public func reapEssences() {
-    essences.reap()
-}
 
 open class SpriteEssence<Essence> {
     
@@ -31,7 +24,7 @@ open class SpriteEssence<Essence> {
     
     public subscript(node: SKNode) -> Essence? {
         get {
-            if let vessel = essences[node] {
+            if let vessel = node.userData?["vessel"] as? SpriteEssenceVessel {
                 return vessel[key] as? Essence
             }
             
@@ -39,12 +32,16 @@ open class SpriteEssence<Essence> {
         }
         
         set {
-            if let vessel = essences[node] {
+            if let vessel = node.userData?["vessel"] as? SpriteEssenceVessel {
                 vessel[key] = newValue
             }
             else {
                 let vessel = SpriteEssenceVessel()
-                essences[node] = vessel
+                
+                node.userData = [
+                    "vessel" : vessel
+                ]
+                
                 vessel[key] = newValue
             }
         }
