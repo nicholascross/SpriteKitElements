@@ -12,9 +12,9 @@ import SpriteKit
 
 class SpriteKitElementsTests: XCTestCase {
     
-    var elementScene: SpriteElementScene!
-    var node: SKNode!
-    var element: MockElement!
+    private var elementScene: SpriteElementScene!
+    private var node: SKNode!
+    private var element: MockElement!
     
     override func setUp() {
         super.setUp()
@@ -134,7 +134,7 @@ class SpriteKitElementsTests: XCTestCase {
     }
 }
 
-class MockElement : SpriteElement {
+fileprivate class MockElement : SpriteElement {
     var didUpdateElement = false
     var didAttachToElement = false
     var didEvaluateActionsForElement = false
