@@ -14,6 +14,22 @@
 		E1014F821DC42D1300E46D31 /* SpriteElementEssence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F7C1DC42D1300E46D31 /* SpriteElementEssence.swift */; };
 		E1014F861DC42D1300E46D31 /* SpriteElementScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F801DC42D1300E46D31 /* SpriteElementScene.swift */; };
 		E118898E1DC85873001D06C8 /* SpriteEssenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E118898D1DC85873001D06C8 /* SpriteEssenceTests.swift */; };
+		E118899D1DC8623D001D06C8 /* SpriteKitElements.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11889941DC8623C001D06C8 /* SpriteKitElements.framework */; };
+		E11889AB1DC862BE001D06C8 /* SpriteElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F7B1DC42D1300E46D31 /* SpriteElement.swift */; };
+		E11889AC1DC862BE001D06C8 /* SpriteElementEssence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F7C1DC42D1300E46D31 /* SpriteElementEssence.swift */; };
+		E11889AD1DC862BE001D06C8 /* SpriteElementScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F801DC42D1300E46D31 /* SpriteElementScene.swift */; };
+		E11889AF1DC862D3001D06C8 /* WeakDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11889AE1DC862D3001D06C8 /* WeakDictionary.framework */; };
+		E11889B01DC862E8001D06C8 /* Info.plist in Headers */ = {isa = PBXBuildFile; fileRef = E1014F651DC42CEC00E46D31 /* Info.plist */; settings = {ATTRIBUTES = (Public, ); }; };
+		E11889B11DC862FE001D06C8 /* SpriteKitElementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F6F1DC42CEC00E46D31 /* SpriteKitElementsTests.swift */; };
+		E11889B21DC862FE001D06C8 /* SpriteEssenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E118898D1DC85873001D06C8 /* SpriteEssenceTests.swift */; };
+		E11889C11DC86390001D06C8 /* SpriteKitElements.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11889B81DC86390001D06C8 /* SpriteKitElements.framework */; };
+		E11889D01DC863D0001D06C8 /* WeakDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11889CF1DC863D0001D06C8 /* WeakDictionary.framework */; };
+		E11889D11DC863DD001D06C8 /* SpriteKitElements.h in Headers */ = {isa = PBXBuildFile; fileRef = E1014F641DC42CEC00E46D31 /* SpriteKitElements.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E11889D21DC863F2001D06C8 /* SpriteElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F7B1DC42D1300E46D31 /* SpriteElement.swift */; };
+		E11889D31DC863F2001D06C8 /* SpriteElementEssence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F7C1DC42D1300E46D31 /* SpriteElementEssence.swift */; };
+		E11889D41DC863F2001D06C8 /* SpriteElementScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F801DC42D1300E46D31 /* SpriteElementScene.swift */; };
+		E11889D51DC863FA001D06C8 /* SpriteKitElementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F6F1DC42CEC00E46D31 /* SpriteKitElementsTests.swift */; };
+		E11889D61DC863FA001D06C8 /* SpriteEssenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E118898D1DC85873001D06C8 /* SpriteEssenceTests.swift */; };
 		E1DF9B511DC6C8FC0081119E /* WeakDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DF9B501DC6C8FC0081119E /* WeakDictionary.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +39,20 @@
 			containerPortal = E1014F581DC42CEC00E46D31 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E1014F601DC42CEC00E46D31;
+			remoteInfo = SpriteKitElements;
+		};
+		E118899E1DC8623D001D06C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1014F581DC42CEC00E46D31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E11889931DC8623C001D06C8;
+			remoteInfo = SpriteKitElements;
+		};
+		E11889C21DC86390001D06C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1014F581DC42CEC00E46D31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E11889B71DC86390001D06C8;
 			remoteInfo = SpriteKitElements;
 		};
 /* End PBXContainerItemProxy section */
@@ -38,6 +68,12 @@
 		E1014F7C1DC42D1300E46D31 /* SpriteElementEssence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteElementEssence.swift; sourceTree = "<group>"; };
 		E1014F801DC42D1300E46D31 /* SpriteElementScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteElementScene.swift; sourceTree = "<group>"; };
 		E118898D1DC85873001D06C8 /* SpriteEssenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteEssenceTests.swift; sourceTree = "<group>"; };
+		E11889941DC8623C001D06C8 /* SpriteKitElements.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpriteKitElements.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E118899C1DC8623D001D06C8 /* SpriteKitElementsTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SpriteKitElementsTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E11889AE1DC862D3001D06C8 /* WeakDictionary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeakDictionary.framework; path = "../Carthage/Checkouts/WeakDictionary/build/Debug-appletvos/WeakDictionary.framework"; sourceTree = "<group>"; };
+		E11889B81DC86390001D06C8 /* SpriteKitElements.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpriteKitElements.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E11889C01DC86390001D06C8 /* SpriteKitElementsTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SpriteKitElementsTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E11889CF1DC863D0001D06C8 /* WeakDictionary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeakDictionary.framework; path = ../Carthage/Checkouts/WeakDictionary/build/Debug/WeakDictionary.framework; sourceTree = "<group>"; };
 		E1DF9B501DC6C8FC0081119E /* WeakDictionary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeakDictionary.framework; path = "../Carthage/Checkouts/WeakDictionary/build/Debug-iphoneos/WeakDictionary.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +91,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1014F6B1DC42CEC00E46D31 /* SpriteKitElements.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E11889901DC8623C001D06C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E11889AF1DC862D3001D06C8 /* WeakDictionary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E11889991DC8623D001D06C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E118899D1DC8623D001D06C8 /* SpriteKitElements.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E11889B41DC86390001D06C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E11889D01DC863D0001D06C8 /* WeakDictionary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E11889BD1DC86390001D06C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E11889C11DC86390001D06C8 /* SpriteKitElements.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +144,10 @@
 			children = (
 				E1014F611DC42CEC00E46D31 /* SpriteKitElements.framework */,
 				E1014F6A1DC42CEC00E46D31 /* SpriteKitElementsTests.xctest */,
+				E11889941DC8623C001D06C8 /* SpriteKitElements.framework */,
+				E118899C1DC8623D001D06C8 /* SpriteKitElementsTests-tvOS.xctest */,
+				E11889B81DC86390001D06C8 /* SpriteKitElements.framework */,
+				E11889C01DC86390001D06C8 /* SpriteKitElementsTests-macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +177,8 @@
 		E1F7DC521DC5F68700C5B38E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E11889CF1DC863D0001D06C8 /* WeakDictionary.framework */,
+				E11889AE1DC862D3001D06C8 /* WeakDictionary.framework */,
 				E1DF9B501DC6C8FC0081119E /* WeakDictionary.framework */,
 			);
 			name = Frameworks;
@@ -118,6 +192,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1014F721DC42CEC00E46D31 /* SpriteKitElements.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E11889911DC8623C001D06C8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E11889B01DC862E8001D06C8 /* Info.plist in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E11889B51DC86390001D06C8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E11889D11DC863DD001D06C8 /* SpriteKitElements.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +250,78 @@
 			productReference = E1014F6A1DC42CEC00E46D31 /* SpriteKitElementsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E11889931DC8623C001D06C8 /* SpriteKitElements-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E11889A51DC8623D001D06C8 /* Build configuration list for PBXNativeTarget "SpriteKitElements-tvOS" */;
+			buildPhases = (
+				E118898F1DC8623C001D06C8 /* Sources */,
+				E11889901DC8623C001D06C8 /* Frameworks */,
+				E11889911DC8623C001D06C8 /* Headers */,
+				E11889921DC8623C001D06C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SpriteKitElements-tvOS";
+			productName = SpriteKitElements;
+			productReference = E11889941DC8623C001D06C8 /* SpriteKitElements.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E118899B1DC8623D001D06C8 /* SpriteKitElementsTests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E11889A81DC8623D001D06C8 /* Build configuration list for PBXNativeTarget "SpriteKitElementsTests-tvOS" */;
+			buildPhases = (
+				E11889981DC8623D001D06C8 /* Sources */,
+				E11889991DC8623D001D06C8 /* Frameworks */,
+				E118899A1DC8623D001D06C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E118899F1DC8623D001D06C8 /* PBXTargetDependency */,
+			);
+			name = "SpriteKitElementsTests-tvOS";
+			productName = SpriteKitElementsTests;
+			productReference = E118899C1DC8623D001D06C8 /* SpriteKitElementsTests-tvOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E11889B71DC86390001D06C8 /* SpriteKitElements-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E11889C91DC86390001D06C8 /* Build configuration list for PBXNativeTarget "SpriteKitElements-macOS" */;
+			buildPhases = (
+				E11889B31DC86390001D06C8 /* Sources */,
+				E11889B41DC86390001D06C8 /* Frameworks */,
+				E11889B51DC86390001D06C8 /* Headers */,
+				E11889B61DC86390001D06C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SpriteKitElements-macOS";
+			productName = SpriteKitElements;
+			productReference = E11889B81DC86390001D06C8 /* SpriteKitElements.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E11889BF1DC86390001D06C8 /* SpriteKitElementsTests-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E11889CC1DC86390001D06C8 /* Build configuration list for PBXNativeTarget "SpriteKitElementsTests-macOS" */;
+			buildPhases = (
+				E11889BC1DC86390001D06C8 /* Sources */,
+				E11889BD1DC86390001D06C8 /* Frameworks */,
+				E11889BE1DC86390001D06C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E11889C31DC86390001D06C8 /* PBXTargetDependency */,
+			);
+			name = "SpriteKitElementsTests-macOS";
+			productName = SpriteKitElementsTests;
+			productReference = E11889C01DC86390001D06C8 /* SpriteKitElementsTests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,6 +343,26 @@
 						DevelopmentTeam = BRM53H4XE2;
 						ProvisioningStyle = Automatic;
 					};
+					E11889931DC8623C001D06C8 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = BRM53H4XE2;
+						ProvisioningStyle = Automatic;
+					};
+					E118899B1DC8623D001D06C8 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = BRM53H4XE2;
+						ProvisioningStyle = Automatic;
+					};
+					E11889B71DC86390001D06C8 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = BRM53H4XE2;
+						ProvisioningStyle = Automatic;
+					};
+					E11889BF1DC86390001D06C8 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = BRM53H4XE2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = E1014F5B1DC42CEC00E46D31 /* Build configuration list for PBXProject "SpriteKitElements" */;
@@ -197,6 +379,10 @@
 			targets = (
 				E1014F601DC42CEC00E46D31 /* SpriteKitElements-iOS */,
 				E1014F691DC42CEC00E46D31 /* SpriteKitElementsTests-iOS */,
+				E11889931DC8623C001D06C8 /* SpriteKitElements-tvOS */,
+				E118899B1DC8623D001D06C8 /* SpriteKitElementsTests-tvOS */,
+				E11889B71DC86390001D06C8 /* SpriteKitElements-macOS */,
+				E11889BF1DC86390001D06C8 /* SpriteKitElementsTests-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -210,6 +396,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E1014F681DC42CEC00E46D31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E11889921DC8623C001D06C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E118899A1DC8623D001D06C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E11889B61DC86390001D06C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E11889BE1DC86390001D06C8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -238,6 +452,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E118898F1DC8623C001D06C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E11889AB1DC862BE001D06C8 /* SpriteElement.swift in Sources */,
+				E11889AC1DC862BE001D06C8 /* SpriteElementEssence.swift in Sources */,
+				E11889AD1DC862BE001D06C8 /* SpriteElementScene.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E11889981DC8623D001D06C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E11889B11DC862FE001D06C8 /* SpriteKitElementsTests.swift in Sources */,
+				E11889B21DC862FE001D06C8 /* SpriteEssenceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E11889B31DC86390001D06C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E11889D21DC863F2001D06C8 /* SpriteElement.swift in Sources */,
+				E11889D31DC863F2001D06C8 /* SpriteElementEssence.swift in Sources */,
+				E11889D41DC863F2001D06C8 /* SpriteElementScene.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E11889BC1DC86390001D06C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E11889D51DC863FA001D06C8 /* SpriteKitElementsTests.swift in Sources */,
+				E11889D61DC863FA001D06C8 /* SpriteEssenceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -245,6 +497,16 @@
 			isa = PBXTargetDependency;
 			target = E1014F601DC42CEC00E46D31 /* SpriteKitElements-iOS */;
 			targetProxy = E1014F6C1DC42CEC00E46D31 /* PBXContainerItemProxy */;
+		};
+		E118899F1DC8623D001D06C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E11889931DC8623C001D06C8 /* SpriteKitElements-tvOS */;
+			targetProxy = E118899E1DC8623D001D06C8 /* PBXContainerItemProxy */;
+		};
+		E11889C31DC86390001D06C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E11889B71DC86390001D06C8 /* SpriteKitElements-macOS */;
+			targetProxy = E11889C21DC86390001D06C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -423,6 +685,160 @@
 			};
 			name = Release;
 		};
+		E11889A61DC8623D001D06C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BRM53H4XE2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SpriteKitElements/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElements;
+				PRODUCT_NAME = SpriteKitElements;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		E11889A71DC8623D001D06C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BRM53H4XE2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SpriteKitElements/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElements;
+				PRODUCT_NAME = SpriteKitElements;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		E11889A91DC8623D001D06C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = BRM53H4XE2;
+				INFOPLIST_FILE = SpriteKitElementsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElementsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		E11889AA1DC8623D001D06C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = BRM53H4XE2;
+				INFOPLIST_FILE = SpriteKitElementsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElementsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		E11889CA1DC86390001D06C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BRM53H4XE2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SpriteKitElements/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElements;
+				PRODUCT_NAME = SpriteKitElements;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E11889CB1DC86390001D06C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BRM53H4XE2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SpriteKitElements/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElements;
+				PRODUCT_NAME = SpriteKitElements;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E11889CD1DC86390001D06C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BRM53H4XE2;
+				INFOPLIST_FILE = SpriteKitElementsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElementsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E11889CE1DC86390001D06C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BRM53H4XE2;
+				INFOPLIST_FILE = SpriteKitElementsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElementsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -452,6 +868,38 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E11889A51DC8623D001D06C8 /* Build configuration list for PBXNativeTarget "SpriteKitElements-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E11889A61DC8623D001D06C8 /* Debug */,
+				E11889A71DC8623D001D06C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E11889A81DC8623D001D06C8 /* Build configuration list for PBXNativeTarget "SpriteKitElementsTests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E11889A91DC8623D001D06C8 /* Debug */,
+				E11889AA1DC8623D001D06C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E11889C91DC86390001D06C8 /* Build configuration list for PBXNativeTarget "SpriteKitElements-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E11889CA1DC86390001D06C8 /* Debug */,
+				E11889CB1DC86390001D06C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E11889CC1DC86390001D06C8 /* Build configuration list for PBXNativeTarget "SpriteKitElementsTests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E11889CD1DC86390001D06C8 /* Debug */,
+				E11889CE1DC86390001D06C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

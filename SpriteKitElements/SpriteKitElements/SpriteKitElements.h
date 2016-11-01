@@ -2,11 +2,11 @@
 //  SpriteKitElements.h
 //  SpriteKitElements
 //
-//  Created by Nicholas Cross on 29/10/2016.
+//  Created by Nicholas Cross on 1/11/2016.
 //  Copyright © 2016 Nicholas Cross. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for SpriteKitElements.
 FOUNDATION_EXPORT double SpriteKitElementsVersionNumber;
