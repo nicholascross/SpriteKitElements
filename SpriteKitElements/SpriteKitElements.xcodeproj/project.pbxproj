@@ -13,6 +13,7 @@
 		E1014F811DC42D1300E46D31 /* SpriteElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F7B1DC42D1300E46D31 /* SpriteElement.swift */; };
 		E1014F821DC42D1300E46D31 /* SpriteElementEssence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F7C1DC42D1300E46D31 /* SpriteElementEssence.swift */; };
 		E1014F861DC42D1300E46D31 /* SpriteElementScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F801DC42D1300E46D31 /* SpriteElementScene.swift */; };
+		E118898E1DC85873001D06C8 /* SpriteEssenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E118898D1DC85873001D06C8 /* SpriteEssenceTests.swift */; };
 		E1DF9B511DC6C8FC0081119E /* WeakDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DF9B501DC6C8FC0081119E /* WeakDictionary.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		E1014F7B1DC42D1300E46D31 /* SpriteElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteElement.swift; sourceTree = "<group>"; };
 		E1014F7C1DC42D1300E46D31 /* SpriteElementEssence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteElementEssence.swift; sourceTree = "<group>"; };
 		E1014F801DC42D1300E46D31 /* SpriteElementScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteElementScene.swift; sourceTree = "<group>"; };
+		E118898D1DC85873001D06C8 /* SpriteEssenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteEssenceTests.swift; sourceTree = "<group>"; };
 		E1DF9B501DC6C8FC0081119E /* WeakDictionary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeakDictionary.framework; path = "../Carthage/Checkouts/WeakDictionary/build/Debug-iphoneos/WeakDictionary.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 			children = (
 				E1014F6F1DC42CEC00E46D31 /* SpriteKitElementsTests.swift */,
 				E1014F711DC42CEC00E46D31 /* Info.plist */,
+				E118898D1DC85873001D06C8 /* SpriteEssenceTests.swift */,
 			);
 			path = SpriteKitElementsTests;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1014F701DC42CEC00E46D31 /* SpriteKitElementsTests.swift in Sources */,
+				E118898E1DC85873001D06C8 /* SpriteEssenceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

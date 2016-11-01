@@ -8,12 +8,18 @@
 
 import Foundation
 import SpriteKit
+import WeakDictionary
 
-var kSpriteEssence: UInt8 = 0
+fileprivate var essences: WeakKeyDictionary<SKNode, SpriteEssenceVessel> = WeakKeyDictionary<SKNode, SpriteEssenceVessel>(withValuesRetainedByKey: true)
+
+public func reapEssences() {
+    essences.reap()
+}
 
 open class SpriteEssence<Essence> {
     
-    let key: String
+    private let key: String
+    
     
     public init() {
         key = UUID().uuidString
@@ -23,9 +29,9 @@ open class SpriteEssence<Essence> {
         self.key = key
     }
     
-    open subscript(node: SKNode) -> Essence? {
+    public subscript(node: SKNode) -> Essence? {
         get {
-            if let vessel = objc_getAssociatedObject(node, &kSpriteEssence) as? SpriteEssenceVessel {
+            if let vessel = essences[node] {
                 return vessel[key] as? Essence
             }
             
@@ -33,22 +39,22 @@ open class SpriteEssence<Essence> {
         }
         
         set {
-            if let vessel = objc_getAssociatedObject(node, &kSpriteEssence) as? SpriteEssenceVessel {
+            if let vessel = essences[node] {
                 vessel[key] = newValue
             }
             else {
                 let vessel = SpriteEssenceVessel()
-                objc_setAssociatedObject(node, &kSpriteEssence, vessel, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+                essences[node] = vessel
                 vessel[key] = newValue
             }
         }
     }
 }
 
-@objc private class SpriteEssenceVessel : NSObject {
+private class SpriteEssenceVessel {
     var essence : [String:Any]
     
-    override init () {
+    init () {
         self.essence = [String:Any]()
     }
     
