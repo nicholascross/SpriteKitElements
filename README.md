@@ -1,22 +1,13 @@
 # SpriteKitElements
 ![build status](https://travis-ci.org/nicholascross/SpriteKitElements.svg?branch=master)
+![code coverage](https://img.shields.io/codecov/c/github/nicholascross/SpriteKitElements.svg)
+[![carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
+[![CocoaPods compatible](https://img.shields.io/cocoapods/v/SpriteKitElements.svg)](https://cocoapods.org/pods/SpriteKitElements) 
+[![GitHub release](https://img.shields.io/github/release/nicholascross/SpriteKitElements.svg)](https://github.com/nicholascross/SpriteKitElements/releases) 
+![Swift 3.0.x](https://img.shields.io/badge/Swift-3.0.x-orange.svg) 
+![platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20OS%20X%20%7C%20tvOS%20-lightgrey.svg)
 
 A small swift framework for attaching additional functionality to any SKNode with out the need to sub class.  This means you can design your scene in Xcode and attach reusable behaviours to any SKNode such as SKLightNode, SKEmitterNode, etc
-
-## Alternatives
-* SpriteKit-Components
- - I have used this before and it works well and has some features this library will not have such as touch handling.
-* SpriteKit
- - I believe in recent versions of SpriteKit there is a component system but I have not looked into this as yet.
-
-## Design Goal
-
-1. Simplicity
-2. Flexability
-
-It should be a simple matter of implementing only the protocol methods you wish to handle then attaching that element to any number of nodes in your scene.
-
-Node sub classing has been avoided because it would not allow direct attachments to custom node types with out extending each one individually.
 
 # SpriteElementScene (class)
 
