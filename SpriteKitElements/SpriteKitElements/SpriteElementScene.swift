@@ -14,18 +14,12 @@ open class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
 
     public var elementReapInterval: TimeInterval = 5
     private var lastReapTime: TimeInterval?
+    private var reapingNeeded: Bool = false
     
     private var lastUpdateTime: TimeInterval?
     private var attachedElements: WeakKeyDictionary<SKNode,SpriteElementCollectionBox> = WeakKeyDictionary<SKNode,SpriteElementCollectionBox>(withValuesRetainedByKey: true)
     
-    var nodeInvolvedInContact: (SKNode, SKPhysicsContact) -> Bool = {
-        node, contact in
-        guard let nodeA = contact.bodyA.node, let nodeB = contact.bodyB.node , nodeA === node || nodeB === node else {
-            return false
-        }
-        
-        return true
-    }
+    
     
     open func attachElement(_ element: SpriteElement, toNode node: SKNode) {
         if let elements = self.attachedElements[node] {
@@ -48,11 +42,28 @@ open class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
     private func _enumerateSpriteElements(_ callback: (_ element: SpriteElement, _ node: SKNode)->()) {
         for (nodeRef, elementRef) in self.attachedElements {
             guard let elements = elementRef.value?.elements, let node = nodeRef.key else {
+                reapingNeeded = true
                 continue
             }
             
             for element in elements {
                 callback(element, node)
+            }
+        }
+    }
+    
+    var testContact: (SKPhysicsBody, WeakKeyDictionary<SKNode,SpriteElementCollectionBox>, (_ element: SpriteElement, _ node: SKNode)->()) -> () = {
+        body, attachedElements, callback in
+        
+        guard let node = body.node else {
+            return
+        }
+        
+        if node === body.node {
+            if let elements = attachedElements[node]?.elements {
+                for element in elements {
+                    callback(element, node)
+                }
             }
         }
     }
@@ -71,7 +82,7 @@ open class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
             return
         }
         
-        if lastReapTime == nil || currentTime - lastReapTime! > elementReapInterval {
+        if reapingNeeded && (lastReapTime == nil || currentTime - lastReapTime! > elementReapInterval) {
             self.attachedElements.reap()
             self.lastReapTime = currentTime
         }
@@ -130,27 +141,31 @@ open class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
     }
     
     open func didBegin(_ contact: SKPhysicsContact) {
-        _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-            if nodeInvolvedInContact(node, contact) {
-                element.didBegin(contact: contact, node: node)
-            }
-            
-            return
+        testContact(contact.bodyA, attachedElements) {
+            element, node in
+            element.didBegin(contact: contact, node: node)
+        }
+        
+        testContact(contact.bodyB, attachedElements) {
+            element, node in
+            element.didBegin(contact: contact, node: node)
         }
     }
 
     open func didEnd(_ contact: SKPhysicsContact) {
-        _enumerateSpriteElements() { (element: SpriteElement, node: SKNode) in
-            if nodeInvolvedInContact(node, contact) {
-                element.didEnd(contact: contact, node: node)
-            }
-            
-            return
+        testContact(contact.bodyA, attachedElements) {
+            element, node in
+            element.didEnd(contact: contact, node: node)
+        }
+        
+        testContact(contact.bodyB, attachedElements) {
+            element, node in
+            element.didEnd(contact: contact, node: node)
         }
     }
 }
 
-fileprivate class SpriteElementCollectionBox {
+class SpriteElementCollectionBox {
     fileprivate var elements: [SpriteElement] = []
     
     func attach(_ element: SpriteElement) {

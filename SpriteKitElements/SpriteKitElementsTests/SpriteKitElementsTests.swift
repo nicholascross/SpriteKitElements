@@ -23,9 +23,9 @@ class SpriteKitElementsTests: XCTestCase {
         node = SKNode()
         element = MockElement()
         
-        elementScene.nodeInvolvedInContact = { [unowned self]
-            node, _ in
-            return node == self.node
+        elementScene.testContact = { [unowned self]
+            body, attachedElements, callback in
+            callback(self.element, self.node)
         }
         
         elementScene.attachElement(element, toNode: node)
@@ -131,10 +131,10 @@ class SpriteKitElementsTests: XCTestCase {
         elementScene.update(0)
         XCTAssert(e != nil, "Expected element to be retained because it is still attached to a node")
         
-        node = nil
-        elementScene.update(2)
+        elementScene.update(1)
         XCTAssert(e != nil, "Expected element to be retained because the scene has not reached the reaping interval")
         
+        node = nil
         elementScene.update(6)
         XCTAssert(e == nil, "Expected element to be released because the scene has passed the reaping interval")
     }
