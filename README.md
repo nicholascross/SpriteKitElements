@@ -98,7 +98,7 @@ class ColorElement : SpriteElement {
 
 ## Element attached and scene update
 Any sprite node whose y position is less than -500 will be removed from the scene
-```
+```swift
 class RemoveOffScreen: SpriteElement {
     
     let timeInterval = SpriteEssence<TimeInterval>()
