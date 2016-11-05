@@ -20,11 +20,11 @@ You can attach an element to a node in your scene using the `func attachElement(
 Implement any of the optional methods in this interface to perform specific actions on a node during the scene life cycle.
 
 ```swift
-	//Called when an element is first attached to a node
+    //Called when an element is first attached to a node
     func didAttach(toNode node: SKNode, inScene scene:SpriteElementScene)
     
     //Called during scene update, delta is the time since the last scene update
-    func update(atTime currentTime: NSTimeInterval, delta: NSTimeInterval, node: SKNode)
+    func update(atTime currentTime: TimeInterval, delta: TimeInterval, node: SKNode)
 
     func didEvaluateActions(_ node: SKNode)
 
@@ -34,15 +34,15 @@ Implement any of the optional methods in this interface to perform specific acti
 
     func didFinishUpdate(_ node: SKNode)
 
-    func didMove(toView view: SKView!, node: SKNode)
+    func didMove(toView view: SKView, node: SKNode)
 
-    func willMove(fromView view: SKView!, node: SKNode)
+    func willMove(fromView view: SKView, node: SKNode)
 
     func didChange(size oldSize: CGSize, node: SKNode)
+
+    func didBegin(contact: SKPhysicsContact, node: SKNode)
     
-    func didBegin(contact contact: SKPhysicsContact, node: SKNode)
-    
-    func didEnd(contact contact: SKPhysicsContact, node: SKNode)
+    func didEnd(contact: SKPhysicsContact, node: SKNode)
 ```
 
 # SpriteEssence (class)
@@ -53,36 +53,65 @@ If maintaining per node state is necessary for the behaviour you are implementin
 
 # Example
 
-Any SKSpriteNode with this element attached will progressively change colour as it collides with other nodes that have the same attached element.  You can see this in action in the example project.
+Source code for this example can be found [here](https://github.com/nicholascross/SpriteKitElementsExample)
 
+## Contact began
+Any SKSpriteNode with this element attached will progressively change colour as it collides with other nodes that have the same attached element.  You can see this in action in the example project.
 ```swift
 import Foundation
 import SpriteKit
+import SpriteKitElements
 
-class ColourElement : SpriteElement {
+class ColorElement : SpriteElement {
     
     let hue = SpriteEssence<CGFloat>()
     
+    func createBody() -> SKPhysicsBody {
+        let body = SKPhysicsBody(circleOfRadius: 40)
+        body.categoryBitMask = 1
+        body.contactTestBitMask = 1
+        body.collisionBitMask = 1
+        body.affectedByGravity = true
+        return body;
+    }
+    
     func didAttach(toNode node: SKNode, inScene scene: SpriteElementScene) {
-        node.physicsBody?.contactTestBitMask = 1;
+        hue[node] = 0
+        node.physicsBody = createBody()
     }
     
     func didBegin(contact: SKPhysicsContact, node: SKNode) {
-        if let h = hue[node] {
-            hue[node] = h + 0.05
-        }
-        else {
-            hue[node] = 0
-        }
-        
-        if let spriteNode = node as? SKSpriteNode, let h = hue[node] {
+        if let shapeNode = node as? SKShapeNode, let h = hue[node] {
             if h > 0.9 {
                 hue[node] = 0
             }
+            else {
+                hue[node] = h + 0.05
+            }
             
-            spriteNode.color = UIColor(hue: h, saturation: 1, brightness: 0.9, alpha: 1)
+            shapeNode.strokeColor = UIColor(hue: h, saturation: 1, brightness: 0.9, alpha: 1)
         }
     }
+
+}
+```
+
+## Element attached and scene update
+Any sprite node whose y position is less than -500 will be removed from the scene
+```
+class RemoveOffScreen: SpriteElement {
     
+    let timeInterval = SpriteEssence<TimeInterval>()
+    
+    func didAttach(toNode node: SKNode, inScene scene: SpriteElementScene) {
+        timeInterval[node] = 0
+    }
+    
+    func update(atTime currentTime: TimeInterval, delta: TimeInterval, node: SKNode) {
+        if currentTime > timeInterval[node]! + 1 &&  node.position.y < -500 {
+            node.removeFromParent()
+            timeInterval[node] = currentTime
+        }
+    }  
 }
 ```
