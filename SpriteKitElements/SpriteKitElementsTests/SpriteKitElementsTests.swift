@@ -138,6 +138,23 @@ class SpriteKitElementsTests: XCTestCase {
         elementScene.update(6)
         XCTAssert(e == nil, "Expected element to be released because the scene has passed the reaping interval")
     }
+    
+    func testEnumeratePerformance() {
+        var nodes: [SKNode] = [SKNode]()
+        
+        for _ in 0..<500 {
+            let node = SKNode()
+            node.position = CGPoint(x: Int(arc4random_uniform(1000)), y: 0)
+            nodes.append(node)
+            elementScene.attachElement(element, toNode: node)
+        }
+        
+        measure {
+            for i in 0..<60 {
+                self.elementScene.update(TimeInterval(i))
+            }
+        }
+    }
 }
 
 fileprivate class MockElement : SpriteElement {
