@@ -113,8 +113,6 @@ class RemoveOffScreen: SpriteElement {
             return
         }
         
-        print("updating")
-        
         timeInterval[node] = currentTime
         
         if node.position.y < -500 {
