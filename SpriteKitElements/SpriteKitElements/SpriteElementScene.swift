@@ -17,7 +17,7 @@ open class SpriteElementScene : SKScene, SKPhysicsContactDelegate {
     private var reapingNeeded: Bool = false
     
     private var lastUpdateTime: TimeInterval?
-    private var attachedElements: WeakKeyDictionary<SKNode,SpriteElementCollectionBox> = WeakKeyDictionary<SKNode,SpriteElementCollectionBox>(withValuesRetainedByKey: true)
+    private var attachedElements: WeakKeyDictionary<SKNode,SpriteElementCollectionBox> = WeakKeyDictionary<SKNode,SpriteElementCollectionBox>(valuesRetainedByKey: true)
     
     
     
