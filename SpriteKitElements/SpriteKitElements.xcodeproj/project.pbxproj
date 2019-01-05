@@ -335,12 +335,13 @@
 					E1014F601DC42CEC00E46D31 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = BRM53H4XE2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					E1014F691DC42CEC00E46D31 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = BRM53H4XE2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					E11889931DC8623C001D06C8 = {
@@ -558,6 +559,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -603,6 +605,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -631,7 +634,7 @@
 				PRODUCT_NAME = SpriteKitElements;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 			};
 			name = Debug;
 		};
@@ -655,7 +658,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElements;
 				PRODUCT_NAME = SpriteKitElements;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 			};
 			name = Release;
 		};
@@ -668,7 +671,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElementsTests;
 				PRODUCT_NAME = SpriteKitElementsTests;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 			};
 			name = Debug;
 		};
@@ -681,7 +684,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElementsTests;
 				PRODUCT_NAME = SpriteKitElementsTests;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 			};
 			name = Release;
 		};
@@ -701,7 +704,6 @@
 				PRODUCT_NAME = SpriteKitElements;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
@@ -723,7 +725,6 @@
 				PRODUCT_NAME = SpriteKitElements;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
@@ -739,7 +740,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElementsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
@@ -754,7 +754,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElementsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
@@ -778,7 +777,6 @@
 				PRODUCT_NAME = SpriteKitElements;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -801,7 +799,6 @@
 				PRODUCT_NAME = SpriteKitElements;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -818,7 +815,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElementsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -835,7 +831,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElementsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -876,6 +871,7 @@
 				E11889A71DC8623D001D06C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E11889A81DC8623D001D06C8 /* Build configuration list for PBXNativeTarget "SpriteKitElementsTests-tvOS" */ = {
 			isa = XCConfigurationList;
@@ -884,6 +880,7 @@
 				E11889AA1DC8623D001D06C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E11889C91DC86390001D06C8 /* Build configuration list for PBXNativeTarget "SpriteKitElements-macOS" */ = {
 			isa = XCConfigurationList;
@@ -892,6 +889,7 @@
 				E11889CB1DC86390001D06C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E11889CC1DC86390001D06C8 /* Build configuration list for PBXNativeTarget "SpriteKitElementsTests-macOS" */ = {
 			isa = XCConfigurationList;
@@ -900,6 +898,7 @@
 				E11889CE1DC86390001D06C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
