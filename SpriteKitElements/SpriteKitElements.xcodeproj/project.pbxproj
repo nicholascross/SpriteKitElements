@@ -19,7 +19,6 @@
 		E11889AC1DC862BE001D06C8 /* SpriteElementEssence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F7C1DC42D1300E46D31 /* SpriteElementEssence.swift */; };
 		E11889AD1DC862BE001D06C8 /* SpriteElementScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F801DC42D1300E46D31 /* SpriteElementScene.swift */; };
 		E11889AF1DC862D3001D06C8 /* WeakDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11889AE1DC862D3001D06C8 /* WeakDictionary.framework */; };
-		E11889B01DC862E8001D06C8 /* Info.plist in Headers */ = {isa = PBXBuildFile; fileRef = E1014F651DC42CEC00E46D31 /* Info.plist */; settings = {ATTRIBUTES = (Public, ); }; };
 		E11889B11DC862FE001D06C8 /* SpriteKitElementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1014F6F1DC42CEC00E46D31 /* SpriteKitElementsTests.swift */; };
 		E11889B21DC862FE001D06C8 /* SpriteEssenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E118898D1DC85873001D06C8 /* SpriteEssenceTests.swift */; };
 		E11889C11DC86390001D06C8 /* SpriteKitElements.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11889B81DC86390001D06C8 /* SpriteKitElements.framework */; };
@@ -199,7 +198,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E11889B01DC862E8001D06C8 /* Info.plist in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +220,7 @@
 				E1014F5D1DC42CEC00E46D31 /* Frameworks */,
 				E1014F5E1DC42CEC00E46D31 /* Headers */,
 				E1014F5F1DC42CEC00E46D31 /* Resources */,
+				E11DB2CE21E0A836008C46D0 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -329,7 +328,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Nicholas Cross";
 				TargetAttributes = {
 					E1014F601DC42CEC00E46D31 = {
@@ -433,6 +432,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E11DB2CE21E0A836008C46D0 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --lenient\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E1014F5C1DC42CEC00E46D31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -521,15 +541,24 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -575,15 +604,24 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -634,7 +672,6 @@
 				PRODUCT_NAME = SpriteKitElements;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 			};
 			name = Debug;
 		};
@@ -658,7 +695,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElements;
 				PRODUCT_NAME = SpriteKitElements;
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 			};
 			name = Release;
 		};
@@ -671,7 +707,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElementsTests;
 				PRODUCT_NAME = SpriteKitElementsTests;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 			};
 			name = Debug;
 		};
@@ -684,7 +719,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nacross.SpriteKitElementsTests;
 				PRODUCT_NAME = SpriteKitElementsTests;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 			};
 			name = Release;
 		};
